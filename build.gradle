@@ -18,7 +18,16 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
+    maven {
+        url "https://maven.blamejared.com/"
+    }
 }
 
 base {
@@ -112,6 +121,15 @@ configurations {
 }
 
 dependencies {
+    implementation "curse.maven:farmers-delight-398521:6597295"
+
+    compileOnly "mezz.jei:jei-1.21.1-neoforge-api:19.21.2.313"
+    localRuntime "mezz.jei:jei-1.21.1-neoforge:19.21.2.313"
+
+    localRuntime "curse.maven:jade-324717:6853386"
+
+    localRuntime "curse.maven:appleskin-248787:6616291"
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
