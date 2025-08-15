@@ -1,5 +1,8 @@
 package net.giuliano.peruviansdelight;
 
+import net.giuliano.peruviansdelight.block.ModBlocks;
+import net.giuliano.peruviansdelight.item.ModCreativeModeTabs;
+import net.giuliano.peruviansdelight.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -18,11 +21,9 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(PeruviansDelight.MODID)
+@Mod(PeruviansDelight.MOD_ID)
 public class PeruviansDelight {
-    // Define mod id in a common place for everything to reference
-    public static final String MODID = "peruviansdelight";
-    // Directly reference a slf4j logger
+    public static final String MOD_ID = "peruviansdelight";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -35,6 +36,11 @@ public class PeruviansDelight {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -59,7 +65,7 @@ public class PeruviansDelight {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = PeruviansDelight.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = PeruviansDelight.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {

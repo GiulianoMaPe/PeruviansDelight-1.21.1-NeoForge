@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "peruviansdelight:limonero_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "peruviansdelight:limonero_planks"
+  }
+}
