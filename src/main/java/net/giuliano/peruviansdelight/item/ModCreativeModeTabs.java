@@ -18,9 +18,57 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CAUSA.get()))
                     .title(Component.translatable("creativeTab.peruviansdelight_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-
                         output.accept(ModItems.INCA_KOLA.get());
+
                         output.accept(ModItems.CAUSA.get());
+                        output.accept(ModItems.CAUSA_ATUN.get());
+                        output.accept(ModItems.CHAUFA.get());
+                        output.accept(ModItems.TALLARIN_SALTADO.get());
+                        output.accept(ModItems.LOMO_SALTADO.get());
+                        output.accept(ModItems.POLLO_BRASA.get());
+                        output.accept(ModItems.CEVICHE.get());
+                        output.accept(ModItems.AEROPUERTO.get());
+                        output.accept(ModItems.MOSTRITO.get());
+                        output.accept(ModItems.PAPA_HUANCAINA.get());
+
+                        output.accept(ModItems.TOCOSH.get());
+
+                        output.accept(ModItems.AJI_AMARILLO.get());
+                        output.accept(ModItems.LIMON.get());
+                        output.accept(ModItems.GAJO_LIMON.get());
+
+                        //output.accept(ModItems.KION.get());
+
+                        //output.accept(ModItems.CAMOTE.get());
+
+                        output.accept(ModItems.CAMOTE_COCIDO.get());
+                        output.accept(ModItems.CAMOTE_CORTADO.get());
+                        output.accept(ModItems.CAMOTE_FRITO.get());
+
+                        //output.accept(ModItems.YUCA.get());
+
+                        output.accept(ModItems.YUCA_CORTADA.get());
+                        output.accept(ModItems.YUCA_FRITA.get());
+                        output.accept(ModItems.ATUN.get());
+                        output.accept(ModItems.FILETE_ATUN.get());
+                        output.accept(ModItems.FILETE_ATUN_COCIDO.get());
+                        output.accept(ModItems.PALTA.get());
+                        output.accept(ModItems.PALTA_CORTADA.get());
+                        output.accept(ModItems.PAPAS_CORTADAS.get());
+                        output.accept(ModItems.PAPAS_FRITAS.get());
+                        output.accept(ModItems.TENTACULO_POTA.get());
+                        output.accept(ModItems.POTA_CORTADO.get());
+                        output.accept(ModItems.CHICHARRON_POTA.get());
+
+                        output.accept(ModItems.POTE_AJI_AMARILLO.get());
+                        output.accept(ModItems.SILLAO.get());
+                        output.accept(ModItems.HUANCAINA.get());
+
+                        //output.accept(ModItems.ATUN_BUCKET.get());
+
+                        output.accept(ModItems.VAINA_SOYA.get());
+                        //output.accept(ModItems.GRANOS_SOYA.get());
+                        //output.accept(ModItems.SEMILLAS_AJI_AMARILLO.get());
 
                         output.accept(ModBlocks.LIMONERO_WOOD.get());
                         output.accept(ModBlocks.LIMONERO_PLANKS.get());
