@@ -111,6 +111,20 @@ public class ModItems {
     //GRANOS_SOYA
     //SEMILLAS_AJI_AMARRILLO
 
+    public static final DeferredItem<Item> BEEF_HEART = ITEMS.registerItem("beef_heart",
+            Item::new, new Item.Properties().food(ModFoodProperties.BEEF_HEART));
+    public static final DeferredItem<Item> RAW_HEART_SLICES = ITEMS.registerItem("raw_heart_slices",
+            Item::new, new Item.Properties().food(ModFoodProperties.RAW_HEART_SLICES));
+    public static final DeferredItem<Item> RAW_ANTICUCHO = ITEMS.registerItem("raw_anticucho",
+            Item::new, new Item.Properties().food(ModFoodProperties.RAW_ANTICUCHO));
+    public static final DeferredItem<Item> ANTICUCHO = ITEMS.registerItem("anticucho",
+            Item::new, new Item.Properties().food(ModFoodProperties.ANTICUCHO));
+
+    public static final DeferredItem<Item> MASA_PICARONES = ITEMS.registerItem("masa_picarones",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> PICARONES = ITEMS.registerItem("picarones",
+            Item::new, new Item.Properties().food(ModFoodProperties.PICARONES));
+
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

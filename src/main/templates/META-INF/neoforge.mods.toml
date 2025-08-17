@@ -88,29 +88,8 @@ description='''${mod_description}'''
 
 [[dependencies.${mod_id}]]
     modId="farmersdelight"
-    type="required"
+    type="${farmersdelight_dependency_type}"
     versionRange="[1.2.4,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.${mod_id}]]
-    modId="jei"
-    type="optional"
-    versionRange="[19.21,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.${mod_id}]]
-    modId="jade"
-    type="optional"
-    versionRange="[15.0,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.${mod_id}]]
-    modId="appleskin"
-    type="optional"
-    versionRange="[3.0,)"
     ordering="NONE"
     side="BOTH"
 

@@ -90,4 +90,16 @@ public class ModFoodProperties {
             .saturationModifier(1f).build();
     public static final FoodProperties CHICHARRON_POTA = new FoodProperties.Builder().nutrition(4).fast()
             .saturationModifier(0.75f).build();
+
+    public static final FoodProperties BEEF_HEART = new FoodProperties.Builder().nutrition(6)
+            .saturationModifier(0.2f).build();
+    public static final FoodProperties RAW_HEART_SLICES = new FoodProperties.Builder().nutrition(4).fast()
+            .saturationModifier(0.5f).build();
+    public static final FoodProperties RAW_ANTICUCHO = new FoodProperties.Builder().nutrition(4)
+            .saturationModifier(0.5f).build();
+    public static final FoodProperties ANTICUCHO = new FoodProperties.Builder().nutrition(8)
+            .saturationModifier(0.75f).build();
+
+    public static final FoodProperties PICARONES = new FoodProperties.Builder().nutrition(8)
+            .saturationModifier(1f).build();
 }
