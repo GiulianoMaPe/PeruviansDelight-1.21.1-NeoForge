@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_filete_atun": {
+      "conditions": {
+        "items": [
+          {
+            "items": "peruviansdelight:filete_atun"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:filete_atun_cocido_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_filete_atun"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:filete_atun_cocido_from_campfire_cooking"
+    ]
+  }
+}

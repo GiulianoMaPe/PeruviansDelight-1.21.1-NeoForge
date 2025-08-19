@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pota_cortado": {
+      "conditions": {
+        "items": [
+          {
+            "items": "peruviansdelight:pota_cortado"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chicharron_pota_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pota_cortado"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chicharron_pota_from_smelting"
+    ]
+  }
+}

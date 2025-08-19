@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "X": {
+    "S": {
       "item": "peruviansdelight:limonero_planks"
     }
   },
   "pattern": [
-    "XXX",
-    "XXX",
-    "XXX"
+    "SSS",
+    "SSS",
+    "SSS"
   ],
   "result": {
     "count": 1,

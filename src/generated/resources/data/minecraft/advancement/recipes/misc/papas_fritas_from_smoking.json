@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_papas_cortadas": {
+      "conditions": {
+        "items": [
+          {
+            "items": "peruviansdelight:papas_cortadas"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:papas_fritas_from_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_papas_cortadas"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:papas_fritas_from_smoking"
+    ]
+  }
+}

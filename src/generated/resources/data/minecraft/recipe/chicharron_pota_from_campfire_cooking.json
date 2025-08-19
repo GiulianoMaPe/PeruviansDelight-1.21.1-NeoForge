@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "peruviansdelight:pota_cortado"
+  },
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:chicharron_pota"
+  }
+}

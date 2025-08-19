@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_camote_cortado": {
+      "conditions": {
+        "items": [
+          {
+            "items": "peruviansdelight:camote_cortado"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:camote_frito_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_camote_cortado"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:camote_frito_from_campfire_cooking"
+    ]
+  }
+}
