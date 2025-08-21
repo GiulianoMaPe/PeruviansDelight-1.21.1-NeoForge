@@ -21,20 +21,18 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ItemTags.LOGS_THAT_BURN).add(ModBlocks.LIMONERO_WOOD.get().asItem());
-                /*
+        tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.PALTO_LOG.get().asItem())
                 .add(ModBlocks.PALTO_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_PALTO_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_PALTO_WOOD.get().asItem())
                 .add(ModBlocks.LIMONERO_LOG.get().asItem())
-                .add(ModBlocks.LIMONERO_WOOD.get().asItem());
+                .add(ModBlocks.LIMONERO_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_LIMONERO_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_LIMONERO_WOOD.get().asItem());
-                */
 
         tag(ItemTags.PLANKS)
-                //.add(ModBlocks.PALTO_PLANKS.get().asItem())
+                .add(ModBlocks.PALTO_PLANKS.get().asItem())
                 .add(ModBlocks.LIMONERO_PLANKS.get().asItem());
 
         tag(Tags.Items.FOODS_RAW_FISH)

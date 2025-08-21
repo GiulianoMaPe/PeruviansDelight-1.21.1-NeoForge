@@ -36,17 +36,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AJI_AMARILLO.get());
                         output.accept(ModItems.LIMON.get());
                         output.accept(ModItems.GAJO_LIMON.get());
-
                         //output.accept(ModItems.KION.get());
 
                         //output.accept(ModItems.CAMOTE.get());
-
                         output.accept(ModItems.CAMOTE_COCIDO.get());
                         output.accept(ModItems.CAMOTE_CORTADO.get());
                         output.accept(ModItems.CAMOTE_FRITO.get());
-
                         //output.accept(ModItems.YUCA.get());
-
                         output.accept(ModItems.YUCA_CORTADA.get());
                         output.accept(ModItems.YUCA_FRITA.get());
                         output.accept(ModItems.ATUN.get());
@@ -77,12 +73,52 @@ public class ModCreativeModeTabs {
                         //output.accept(ModItems.GRANOS_SOYA.get());
                         //output.accept(ModItems.SEMILLAS_AJI_AMARILLO.get());
 
+                        //output.accept(ModItems.ATUN_SPAWN_EGG.get());
+
+                        output.accept(ModBlocks.SEMILLA_PALTA.get());
+                        output.accept(ModBlocks.SEMILLAS_LIMON.get());
+
+                        output.accept(ModBlocks.PALTO_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_PALTO_LOG.get());
+                        output.accept(ModBlocks.PALTO_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_PALTO_WOOD.get());
+                        output.accept(ModBlocks.PALTO_PLANKS.get());
+
+                        output.accept(ModBlocks.PALTO_STAIRS.get());
+                        output.accept(ModBlocks.PALTO_SLAB.get());
+                        output.accept(ModBlocks.PALTO_FENCE.get());
+                        output.accept(ModBlocks.PALTO_FENCE_GATE.get());
+                        output.accept(ModBlocks.PALTO_DOOR.get());
+                        output.accept(ModBlocks.PALTO_TRAPDOOR.get());
+                        output.accept(ModBlocks.PALTO_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.PALTO_BUTTON.get());
+
+                        output.accept(ModBlocks.LIMONERO_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_LIMONERO_LOG.get());
                         output.accept(ModBlocks.LIMONERO_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_LIMONERO_WOOD.get());
                         output.accept(ModBlocks.LIMONERO_PLANKS.get());
 
-                        //PALTO LIMONERO
+                        output.accept(ModBlocks.LIMONERO_STAIRS.get());
+                        output.accept(ModBlocks.LIMONERO_SLAB.get());
+                        output.accept(ModBlocks.LIMONERO_FENCE.get());
+                        output.accept(ModBlocks.LIMONERO_FENCE_GATE.get());
+                        output.accept(ModBlocks.LIMONERO_DOOR.get());
+                        output.accept(ModBlocks.LIMONERO_TRAPDOOR.get());
+                        output.accept(ModBlocks.LIMONERO_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.LIMONERO_BUTTON.get());
 
-                        //SILVESTRES
+                        output.accept(ModBlocks.PALTO_LEAVES.get());
+                        output.accept(ModBlocks.PALTO_LEAVES_EMPTY.get());
+
+                        output.accept(ModBlocks.LIMONERO_LEAVES.get());
+                        output.accept(ModBlocks.LIMONERO_LEAVES_EMPTY.get());
+
+                        //output.accept(ModBlocks.AJI_AMARILLO_SILVESTRE.get());
+                        //output.accept(ModBlocks.KION_SILVESTRE.get());
+                        //output.accept(ModBlocks.SOYA_SILVESTRE.get());
+                        //output.accept(ModBlocks.CAMOTE_SILVESTRE.get());
+                        //output.accept(ModBlocks.YUCA_SILVESTRE.get());
 
                     }).build());
 

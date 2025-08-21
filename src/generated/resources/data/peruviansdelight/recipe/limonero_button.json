@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "limonero",
+  "ingredients": [
+    {
+      "item": "peruviansdelight:limonero_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:limonero_button"
+  }
+}

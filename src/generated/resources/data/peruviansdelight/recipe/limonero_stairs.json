@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "limonero",
+  "key": {
+    "#": {
+      "item": "peruviansdelight:limonero_planks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "peruviansdelight:limonero_stairs"
+  }
+}

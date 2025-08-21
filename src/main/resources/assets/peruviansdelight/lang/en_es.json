@@ -1,0 +1,104 @@
+{
+  "creativeTab.peruviansdelight_tab": "Peruvian's Delight",
+
+  "item.peruviansdelight.inca_kola": "Inca Kola",
+
+  "item.peruviansdelight.causa": "Causa de pollo",
+  "item.peruviansdelight.causa_atun": "Causa de atún",
+  "item.peruviansdelight.chaufa": "Chaufa",
+  "item.peruviansdelight.tallarin_saltado": "Tallarín Saltado",
+  "item.peruviansdelight.lomo_saltado": "Lomo Saltado",
+  "item.peruviansdelight.pollo_brasa": "Pollo a la brasa",
+  "item.peruviansdelight.ceviche": "Ceviche",
+  "item.peruviansdelight.aeropuerto": "Aeropuerto",
+  "item.peruviansdelight.mostrito": "Mostrito",
+  "item.peruviansdelight.papa_huancaina": "Papa a la Huancaína",
+
+  "item.peruviansdelight.tocosh": "Tocosh",
+
+  "item.peruviansdelight.aji_amarillo": "Ají amarillo",
+  "item.peruviansdelight.limon": "Limón",
+  "item.peruviansdelight.gajo_limon": "Gajo de limón",
+  "item.peruviansdelight.kion": "Kion",
+
+  "item.peruviansdelight.camote": "Camote",
+  "item.peruviansdelight.camote_cocido": "Camote cocido",
+  "item.peruviansdelight.camote_cortado": "Camote cortado",
+  "item.peruviansdelight.camote_frito": "Camote frito",
+  "item.peruviansdelight.yuca": "Yuca",
+  "item.peruviansdelight.yuca_cortada": "Yuca cortada",
+  "item.peruviansdelight.yuca_frita": "Yuca frita",
+  "item.peruviansdelight.atun": "Atún",
+  "item.peruviansdelight.filete_atun": "Filete de atún",
+  "item.peruviansdelight.filete_atun_cocido": "Filete de atún cocido",
+  "item.peruviansdelight.palta": "Palta",
+  "item.peruviansdelight.palta_cortada": "Palta cortada",
+  "item.peruviansdelight.papas_cortadas": "Papas cortadas",
+  "item.peruviansdelight.papas_fritas": "Papas fritas",
+  "item.peruviansdelight.tentaculo_pota": "Tentáculo de pota",
+  "item.peruviansdelight.pota_cortado": "Tentáculo de pota cortado",
+  "item.peruviansdelight.chicharron_pota": "Chicharrón de pota",
+
+  "item.peruviansdelight.beef_heart": "Corazón de res",
+  "item.peruviansdelight.raw_heart_slices": "Trozos de corazón crudo",
+  "item.peruviansdelight.raw_anticucho": "Anticucho crudo",
+  "item.peruviansdelight.anticucho": "Anticucho",
+  "item.peruviansdelight.masa_picarones": "Masa de picarones",
+  "item.peruviansdelight.picarones": "Picarones",
+
+  "item.peruviansdelight.pote_aji_amarillo": "Pote de ají amarillo",
+  "item.peruviansdelight.sillao": "Sillao",
+  "item.peruviansdelight.huancaina": "Huancaína",
+
+  "item.peruviansdelight.atun_bucket": "Cubo con Atún",
+
+  "item.peruviansdelight.vaina_soya": "Vaina de soya",
+  "item.peruviansdelight.granos_soya": "Granos de soya",
+  "item.peruviansdelight.semillas_aji_amarillo": "Semillas de ají amarillo",
+
+  "item.peruviansdelight.atun_spawn_egg": "Generar atún",
+
+  "block.peruviansdelight.palto_log": "Tronco de palto",
+  "block.peruviansdelight.palto_wood": "Leño de palto",
+  "block.peruviansdelight.stripped_palto_log": "Tronco de palto sin corteza",
+  "block.peruviansdelight.stripped_palto_wood": "Leño de palto sin corteza",
+  "block.peruviansdelight.palto_planks": "Tablones de palto",
+
+  "block.peruviansdelight.palto_leaves": "Hojas de palto con palta",
+  "block.peruviansdelight.palto_leaves_empty": "Hojas de palto",
+  "block.peruviansdelight.semilla_palta": "Semilla de palta",
+
+  "block.peruviansdelight.limonero_log": "Tronco de limonero",
+  "block.peruviansdelight.limonero_wood": "Leño de limonero",
+  "block.peruviansdelight.stripped_limonero_log": "Tronco de limonero sin corteza",
+  "block.peruviansdelight.stripped_limonero_wood": "Leño de limonero sin corteza",
+  "block.peruviansdelight.limonero_planks": "Tablones de limonero",
+
+  "block.peruviansdelight.limonero_leaves": "Hojas de limonero con limón",
+  "block.peruviansdelight.limonero_leaves_empty": "Hojas de limonero",
+  "block.peruviansdelight.semillas_limon": "Semillas de limón",
+
+  "block.peruviansdelight.palto_stairs": "Escaleras de palto",
+  "block.peruviansdelight.palto_slab": "Losa de palto",
+  "block.peruviansdelight.palto_fence": "Valla de palto",
+  "block.peruviansdelight.palto_fence_gate": "Puerta de valla de palto",
+  "block.peruviansdelight.palto_door": "Puerta de palto",
+  "block.peruviansdelight.palto_trapdoor": "Trampilla de palto",
+  "block.peruviansdelight.palto_button": "Botón de palto",
+  "block.peruviansdelight.palto_pressure_plate": "Placa de presión de palto",
+
+  "block.peruviansdelight.limonero_stairs": "Escaleras de limonero",
+  "block.peruviansdelight.limonero_slab": "Losa de limonero",
+  "block.peruviansdelight.limonero_fence": "Valla de limonero",
+  "block.peruviansdelight.limonero_fence_gate": "Puerta de valla de limonero",
+  "block.peruviansdelight.limonero_door": "Puerta de limonero",
+  "block.peruviansdelight.limonero_trapdoor": "Trampilla de limonero",
+  "block.peruviansdelight.limonero_button": "Botón de limonero",
+  "block.peruviansdelight.limonero_pressure_plate": "Placa de presión de limonero",
+
+  "block.peruviansdelight.aji_amarillo_silvestre": "Ají amarillo silvestre",
+  "block.peruviansdelight.kion_silvestre": "Kion silvestre",
+  "block.peruviansdelight.soya_silvestre": "Soya silvestre",
+  "block.peruviansdelight.camote_silvestre": "Camote silvestre",
+  "block.peruviansdelight.yuca_silvestre": "Yuca silvestre"
+}

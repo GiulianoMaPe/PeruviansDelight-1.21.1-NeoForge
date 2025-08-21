@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palto_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "peruviansdelight:palto_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "peruviansdelight:palto_pressure_plate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_palto_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "peruviansdelight:palto_pressure_plate"
+    ]
+  }
+}

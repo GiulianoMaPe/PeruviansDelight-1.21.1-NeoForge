@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "palto",
+  "key": {
+    "#": {
+      "item": "peruviansdelight:palto_planks"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "peruviansdelight:palto_door"
+  }
+}

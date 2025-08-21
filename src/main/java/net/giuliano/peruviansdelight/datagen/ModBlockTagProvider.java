@@ -21,8 +21,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         //tag(BlockTags.MINEABLE_WITH_PICKAXE);
         //tag(BlockTags.NEEDS_IRON_TOOL);
 
-        this.tag(BlockTags.LOGS_THAT_BURN).add(ModBlocks.LIMONERO_WOOD.get());
-                /*
+        this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.PALTO_LOG.get())
                 .add(ModBlocks.PALTO_WOOD.get())
                 .add(ModBlocks.STRIPPED_PALTO_LOG.get())
@@ -31,17 +30,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LIMONERO_WOOD.get())
                 .add(ModBlocks.STRIPPED_LIMONERO_LOG.get())
                 .add(ModBlocks.STRIPPED_LIMONERO_WOOD.get());
-                */
+
         this.tag(BlockTags.PLANKS)
-                //.add(ModBlocks.PALTO_PLANKS.get())
+                .add(ModBlocks.PALTO_PLANKS.get())
                 .add(ModBlocks.LIMONERO_PLANKS.get());
-        /*
+
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.PALTO_FENCE.get())
                 .add(ModBlocks.LIMONERO_FENCE.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.PALTO_FENCE_GATE.get())
                 .add(ModBlocks.LIMONERO_FENCE_GATE.get());
-        */
     }
 }

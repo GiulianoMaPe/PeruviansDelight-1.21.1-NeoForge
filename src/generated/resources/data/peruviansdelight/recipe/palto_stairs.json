@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "palto",
+  "key": {
+    "#": {
+      "item": "peruviansdelight:palto_planks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "peruviansdelight:palto_stairs"
+  }
+}

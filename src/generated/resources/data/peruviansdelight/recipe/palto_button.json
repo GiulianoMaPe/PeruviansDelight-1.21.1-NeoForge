@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "palto",
+  "ingredients": [
+    {
+      "item": "peruviansdelight:palto_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:palto_button"
+  }
+}
