@@ -1,7 +1,7 @@
 package net.giuliano.peruviansdelight.block;
 
 import net.giuliano.peruviansdelight.PeruviansDelight;
-import net.giuliano.peruviansdelight.block.custom.ModFlammableRotatedPillarBlock;
+import net.giuliano.peruviansdelight.block.custom.*;
 import net.giuliano.peruviansdelight.item.ModItems;
 import net.giuliano.peruviansdelight.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
@@ -23,6 +23,17 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(PeruviansDelight.MOD_ID);
+
+    public static final DeferredBlock<Block> AJI_AMARILLO_CROP = BLOCKS.register("ajies_amarillos",
+            () -> new AjiAmarilloCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final DeferredBlock<Block> KION_CROP = registerBlock("kiones",
+            () -> new KionCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES).noOcclusion().noCollission()));
+    public static final DeferredBlock<Block> SOYA_CROP = BLOCKS.register("soyas",
+            () -> new SoyaCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final DeferredBlock<Block> CAMOTE_CROP = BLOCKS.register("camotes",
+            () -> new CamoteCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES).noOcclusion().noCollission()));
+    public static final DeferredBlock<Block> YUCA_CROP = BLOCKS.register("yucas",
+            () -> new YucaCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POTATOES).noOcclusion().noCollission()));
 
     public static final DeferredBlock<Block> LIMONERO_LOG = registerBlock("limonero_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));

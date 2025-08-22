@@ -2,6 +2,33 @@
   "values": {
     "peruviansdelight:aji_amarillo": {
       "chance": 0.65
+    },
+    "peruviansdelight:camote": {
+      "chance": 0.65
+    },
+    "peruviansdelight:chicharron_pota": {
+      "chance": 0.8
+    },
+    "peruviansdelight:kion": {
+      "chance": 0.65
+    },
+    "peruviansdelight:limon": {
+      "chance": 0.65
+    },
+    "peruviansdelight:palta": {
+      "chance": 0.65
+    },
+    "peruviansdelight:papas_cortadas": {
+      "chance": 0.45
+    },
+    "peruviansdelight:tentaculo_pota": {
+      "chance": 0.65
+    },
+    "peruviansdelight:vaina_soya": {
+      "chance": 0.65
+    },
+    "peruviansdelight:yuca": {
+      "chance": 0.65
     }
   }
 }

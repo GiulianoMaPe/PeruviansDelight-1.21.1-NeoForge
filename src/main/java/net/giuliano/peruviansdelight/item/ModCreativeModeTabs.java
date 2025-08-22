@@ -36,13 +36,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AJI_AMARILLO.get());
                         output.accept(ModItems.LIMON.get());
                         output.accept(ModItems.GAJO_LIMON.get());
-                        //output.accept(ModItems.KION.get());
+                        output.accept(ModItems.KION.get());
 
-                        //output.accept(ModItems.CAMOTE.get());
+                        output.accept(ModItems.CAMOTE.get());
                         output.accept(ModItems.CAMOTE_COCIDO.get());
                         output.accept(ModItems.CAMOTE_CORTADO.get());
                         output.accept(ModItems.CAMOTE_FRITO.get());
-                        //output.accept(ModItems.YUCA.get());
+                        output.accept(ModItems.YUCA.get());
                         output.accept(ModItems.YUCA_CORTADA.get());
                         output.accept(ModItems.YUCA_FRITA.get());
                         output.accept(ModItems.ATUN.get());
@@ -70,8 +70,8 @@ public class ModCreativeModeTabs {
                         //output.accept(ModItems.ATUN_BUCKET.get());
 
                         output.accept(ModItems.VAINA_SOYA.get());
-                        //output.accept(ModItems.GRANOS_SOYA.get());
-                        //output.accept(ModItems.SEMILLAS_AJI_AMARILLO.get());
+                        output.accept(ModItems.GRANOS_SOYA.get());
+                        output.accept(ModItems.SEMILLAS_AJI_AMARILLO.get());
 
                         //output.accept(ModItems.ATUN_SPAWN_EGG.get());
 

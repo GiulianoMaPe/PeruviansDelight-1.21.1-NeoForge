@@ -1,6 +1,7 @@
 package net.giuliano.peruviansdelight.datagen;
 
 import net.giuliano.peruviansdelight.block.ModBlocks;
+import net.giuliano.peruviansdelight.block.custom.*;
 import net.giuliano.peruviansdelight.item.ModItems;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.Holder;
@@ -16,8 +17,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -27,6 +30,8 @@ import java.util.List;
 import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
+    private final HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+
     protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
@@ -46,6 +51,36 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.AJI_AMARILLO_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(AjiAmarilloCropBlock.AGE, 7));
+        this.add(ModBlocks.AJI_AMARILLO_CROP.get(), this.createModCropDrops(ModBlocks.AJI_AMARILLO_CROP.get(),
+                ModItems.AJI_AMARILLO.get(), ModItems.SEMILLAS_AJI_AMARILLO.get(), lootitemcondition$builder));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.KION_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(KionCropBlock.AGE, 4));
+        this.add(ModBlocks.KION_CROP.get(), this.createModCropDrops(ModBlocks.KION_CROP.get(), ModItems.KION.get(),
+                ModItems.KION.get(), lootitemcondition$builder2));
+
+        LootItemCondition.Builder lootitemcondition$builder3 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.SOYA_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SoyaCropBlock.AGE, 7));
+        this.add(ModBlocks.SOYA_CROP.get(), createHarvestableCropDrops(ModBlocks.SOYA_CROP.get(), ModItems.VAINA_SOYA.get(),
+                ModItems.GRANOS_SOYA.get(), lootitemcondition$builder3));
+
+        LootItemCondition.Builder lootitemcondition$builder4 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CAMOTE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CamoteCropBlock.AGE, 5));
+        this.add(ModBlocks.CAMOTE_CROP.get(), this.createModCropDrops(ModBlocks.CAMOTE_CROP.get(), ModItems.CAMOTE.get(),
+                ModItems.CAMOTE.get(), lootitemcondition$builder4));
+
+        LootItemCondition.Builder lootitemcondition$builder5 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.YUCA_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(YucaCropBlock.AGE, 4));
+        this.add(ModBlocks.YUCA_CROP.get(), this.createModCropDrops(ModBlocks.YUCA_CROP.get(), ModItems.YUCA.get(),
+                ModItems.YUCA.get(), lootitemcondition$builder5));
+
         dropSelf(ModBlocks.LIMONERO_LOG.get());
         dropSelf(ModBlocks.LIMONERO_WOOD.get());
         dropSelf(ModBlocks.STRIPPED_LIMONERO_LOG.get());
@@ -89,8 +124,28 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PALTO_TRAPDOOR.get());
     }
 
+    protected LootTable.Builder createModCropDrops(Block cropBlock, Item grownCropItem, Item seedsItem, LootItemCondition.Builder dropGrownCropCondition) {
+        return this.applyExplosionDecay(cropBlock, LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .add((LootItem.lootTableItem(seedsItem)
+                                .when(dropGrownCropCondition))
+                                .otherwise(LootItem.lootTableItem(seedsItem))))
+                .withPool(LootPool.lootPool()
+                        .when(dropGrownCropCondition)
+                        .add(LootItem.lootTableItem(grownCropItem)
+                                .apply(ApplyBonusCount.addBonusBinomialDistributionCount(registrylookup.getOrThrow(Enchantments.FORTUNE), 0.5714286F, 2)))));
+    }
+
+    protected LootTable.Builder createHarvestableCropDrops(Block cropBlock, Item grownCropItem, Item seedsItem, LootItemCondition.Builder dropGrownCropCondition) {
+        return this.applyExplosionDecay(cropBlock, LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(grownCropItem)
+                                .apply(ApplyBonusCount.addBonusBinomialDistributionCount(registrylookup.getOrThrow(Enchantments.FORTUNE), 0.5714286F, 2))
+                                .when(dropGrownCropCondition) // Suelta el fruto cuando está maduro
+                                .otherwise(LootItem.lootTableItem(seedsItem))))); // De lo contrario, suelta la semilla
+    }
+
     protected LootTable.Builder createModLeavesDrops(Block leavesBlock, Item dropItem, float... chances) {
-        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         return this.createSilkTouchOrShearsDispatchTable(leavesBlock,
                         this.applyExplosionCondition(leavesBlock,
                                         LootItem.lootTableItem(dropItem))
@@ -107,7 +162,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                         registrylookup.getOrThrow(Enchantments.FORTUNE), NORMAL_LEAVES_STICK_CHANCES))));
     }
     protected LootTable.Builder createEmptyLeavesDrops(Block leavesBlock) {
-        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1.0F))

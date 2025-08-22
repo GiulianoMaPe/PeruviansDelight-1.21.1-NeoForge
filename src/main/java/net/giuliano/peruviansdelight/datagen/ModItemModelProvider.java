@@ -36,13 +36,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.AJI_AMARILLO.get());
         basicItem(ModItems.LIMON.get());
         basicItem(ModItems.GAJO_LIMON.get());
-        //basicItem(ModItems.KION.get());
+        basicItem(ModItems.KION.get());
 
-        //basicItem(ModItems.CAMOTE.get());
+        basicItem(ModItems.CAMOTE.get());
         basicItem(ModItems.CAMOTE_COCIDO.get());
         basicItem(ModItems.CAMOTE_CORTADO.get());
         basicItem(ModItems.CAMOTE_FRITO.get());
-        //basicItem(ModItems.YUCA.get());
+        basicItem(ModItems.YUCA.get());
         basicItem(ModItems.YUCA_CORTADA.get());
         basicItem(ModItems.YUCA_FRITA.get());
         basicItem(ModItems.ATUN.get());
@@ -70,8 +70,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         //basicItem(ModItems.ATUN_BUCKET.get());
 
         basicItem(ModItems.VAINA_SOYA.get());
-        //basicItem(ModItems.GRANOS_SOYA.get());
-        //basicItem(ModItems.SEMILLAS_AJI_AMARILLO.get());
+        basicItem(ModItems.GRANOS_SOYA.get());
+        basicItem(ModItems.SEMILLAS_AJI_AMARILLO.get());
 
         saplingItem(ModBlocks.SEMILLA_PALTA);
         saplingItem(ModBlocks.SEMILLAS_LIMON);

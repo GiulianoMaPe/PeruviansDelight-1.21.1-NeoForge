@@ -2,15 +2,21 @@ package net.giuliano.peruviansdelight.datagen;
 
 import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.block.ModBlocks;
+import net.giuliano.peruviansdelight.block.custom.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -76,6 +82,89 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PALTO_PRESSURE_PLATE);
         blockItem(ModBlocks.PALTO_FENCE_GATE);
         blockItem(ModBlocks.PALTO_TRAPDOOR, "_bottom");
+
+        makeCrop1(((CropBlock) ModBlocks.AJI_AMARILLO_CROP.get()), "ajies_amarillos_stage", "ajies_amarillos_stage");
+        makeCrop2(((CropBlock) ModBlocks.CAMOTE_CROP.get()), "camotes_stage", "camotes_stage");
+        makeCrop3(((CropBlock) ModBlocks.KION_CROP.get()), "kiones_stage", "kiones_stage");
+        makeCrop4(((CropBlock) ModBlocks.SOYA_CROP.get()), "soyas_stage", "soyas_stage");
+        makeCrop5(((CropBlock) ModBlocks.YUCA_CROP.get()), "yucas_stage", "yucas_stage");
+    }
+
+    public void makeCrop1(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states1(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] states1(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(((AjiAmarilloCropBlock) block).getAgeProperty());
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(
+                models().withExistingParent(modelName + age,
+                                modLoc("block/crop_cross"))
+                        .texture("cross", modLoc("block/" + textureName + age))
+                        .renderType("cutout")
+        );
+        return models;
+    }
+    public void makeCrop2(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states2(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] states2(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(((CamoteCropBlock) block).getAgeProperty());
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(
+                models().withExistingParent(modelName + age,
+                                modLoc("block/crop_cross"))
+                        .texture("cross", modLoc("block/" + textureName + age))
+                        .renderType("cutout")
+        );
+        return models;
+    }
+    public void makeCrop3(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states3(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] states3(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((KionCropBlock) block).getAgeProperty()),
+                ResourceLocation.fromNamespaceAndPath(PeruviansDelight.MOD_ID, "block/" + textureName + state.getValue(((KionCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+    public void makeCrop4(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states4(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] states4(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(((SoyaCropBlock) block).getAgeProperty());
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(
+                models().withExistingParent(modelName + age,
+                                modLoc("block/crop_cross"))
+                        .texture("cross", modLoc("block/" + textureName + age))
+                        .renderType("cutout")
+        );
+        return models;
+    }
+    public void makeCrop5(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states5(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] states5(BlockState state, CropBlock block, String modelName, String textureName) {
+        int age = state.getValue(((YucaCropBlock) block).getAgeProperty());
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(
+                models().withExistingParent(modelName + age,
+                                modLoc("block/crop_cross"))
+                        .texture("cross", modLoc("block/" + textureName + age))
+                        .renderType("cutout")
+        );
+        return models;
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {

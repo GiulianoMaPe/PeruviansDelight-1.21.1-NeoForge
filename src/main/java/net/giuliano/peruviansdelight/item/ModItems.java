@@ -1,10 +1,12 @@
 package net.giuliano.peruviansdelight.item;
 
 import net.giuliano.peruviansdelight.PeruviansDelight;
+import net.giuliano.peruviansdelight.block.ModBlocks;
 import net.giuliano.peruviansdelight.item.custom.DrinkFoil;
 import net.giuliano.peruviansdelight.item.custom.ModBowlFood;
 import net.giuliano.peruviansdelight.item.custom.ModDrinkItems;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -59,8 +61,10 @@ public class ModItems {
     public static final DeferredItem<Item> GAJO_LIMON = ITEMS.registerItem("gajo_limon",
             Item::new, new Item.Properties().food(ModFoodProperties.GAJO_LIMON));
 
-    //KION
-    //CAMOTE
+    public static final DeferredItem<Item> KION = ITEMS.register("kion",
+            () -> new ItemNameBlockItem(ModBlocks.KION_CROP.get(), new Item.Properties().food(ModFoodProperties.KION)));
+    public static final DeferredItem<Item> CAMOTE = ITEMS.register("camote",
+            () -> new ItemNameBlockItem(ModBlocks.CAMOTE_CROP.get(), new Item.Properties().food(ModFoodProperties.CAMOTE)));
 
     public static final DeferredItem<Item> CAMOTE_COCIDO = ITEMS.registerItem("camote_cocido",
             Item::new, new Item.Properties().food(ModFoodProperties.CAMOTE_COCIDO));
@@ -69,7 +73,8 @@ public class ModItems {
     public static final DeferredItem<Item> CAMOTE_FRITO = ITEMS.registerItem("camote_frito",
             Item::new, new Item.Properties().food(ModFoodProperties.CAMOTE_FRITO));
 
-    //YUCA
+    public static final DeferredItem<Item> YUCA = ITEMS.register("yuca",
+            () -> new ItemNameBlockItem(ModBlocks.YUCA_CROP.get(), new Item.Properties().food(ModFoodProperties.YUCA)));
 
     public static final DeferredItem<Item> YUCA_CORTADA = ITEMS.registerItem("yuca_cortada",
             Item::new, new Item.Properties().food(ModFoodProperties.YUCA_CORTADA));
@@ -108,8 +113,10 @@ public class ModItems {
     public static final DeferredItem<Item> VAINA_SOYA = ITEMS.registerItem("vaina_soya",
             Item::new, new Item.Properties());
 
-    //GRANOS_SOYA
-    //SEMILLAS_AJI_AMARRILLO
+    public static final DeferredItem<Item> GRANOS_SOYA = ITEMS.register("granos_soya",
+            () -> new ItemNameBlockItem(ModBlocks.SOYA_CROP.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SEMILLAS_AJI_AMARILLO = ITEMS.register("semillas_aji_amarillo",
+            () -> new ItemNameBlockItem(ModBlocks.AJI_AMARILLO_CROP.get(), new Item.Properties()));
 
     public static final DeferredItem<Item> BEEF_HEART = ITEMS.registerItem("beef_heart",
             Item::new, new Item.Properties().food(ModFoodProperties.BEEF_HEART));
