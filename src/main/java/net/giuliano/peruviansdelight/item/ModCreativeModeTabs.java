@@ -114,11 +114,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIMONERO_LEAVES.get());
                         output.accept(ModBlocks.LIMONERO_LEAVES_EMPTY.get());
 
-                        //output.accept(ModBlocks.AJI_AMARILLO_SILVESTRE.get());
-                        //output.accept(ModBlocks.KION_SILVESTRE.get());
-                        //output.accept(ModBlocks.SOYA_SILVESTRE.get());
-                        //output.accept(ModBlocks.CAMOTE_SILVESTRE.get());
-                        //output.accept(ModBlocks.YUCA_SILVESTRE.get());
+                        output.accept(ModBlocks.AJI_AMARILLO_SILVESTRE.get());
+                        output.accept(ModBlocks.KION_SILVESTRE.get());
+                        output.accept(ModBlocks.SOYA_SILVESTRE.get());
+                        output.accept(ModBlocks.CAMOTE_SILVESTRE.get());
+                        output.accept(ModBlocks.YUCA_SILVESTRE.get());
 
                     }).build());
 

@@ -88,6 +88,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeCrop3(((CropBlock) ModBlocks.KION_CROP.get()), "kiones_stage", "kiones_stage");
         makeCrop4(((CropBlock) ModBlocks.SOYA_CROP.get()), "soyas_stage", "soyas_stage");
         makeCrop5(((CropBlock) ModBlocks.YUCA_CROP.get()), "yucas_stage", "yucas_stage");
+
+        simpleBlockWithItem(ModBlocks.AJI_AMARILLO_SILVESTRE.get(), models().cross(blockTexture(ModBlocks.AJI_AMARILLO_SILVESTRE.get()).getPath(),
+                blockTexture(ModBlocks.AJI_AMARILLO_SILVESTRE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.KION_SILVESTRE.get(), models().cross(blockTexture(ModBlocks.KION_SILVESTRE.get()).getPath(),
+                blockTexture(ModBlocks.KION_SILVESTRE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.SOYA_SILVESTRE.get(), models().cross(blockTexture(ModBlocks.SOYA_SILVESTRE.get()).getPath(),
+                blockTexture(ModBlocks.SOYA_SILVESTRE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.CAMOTE_SILVESTRE.get(), models().cross(blockTexture(ModBlocks.CAMOTE_SILVESTRE.get()).getPath(),
+                blockTexture(ModBlocks.CAMOTE_SILVESTRE.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.YUCA_SILVESTRE.get(), models().cross(blockTexture(ModBlocks.YUCA_SILVESTRE.get()).getPath(),
+                blockTexture(ModBlocks.YUCA_SILVESTRE.get())).renderType("cutout"));
     }
 
     public void makeCrop1(CropBlock block, String modelName, String textureName) {

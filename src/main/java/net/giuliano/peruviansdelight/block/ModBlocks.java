@@ -6,6 +6,7 @@ import net.giuliano.peruviansdelight.item.ModItems;
 import net.giuliano.peruviansdelight.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -197,6 +198,22 @@ public class ModBlocks {
     public static final DeferredBlock<TrapDoorBlock> PALTO_TRAPDOOR = registerBlock("palto_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
                     .strength(2f).noOcclusion()));
+
+    public static final DeferredBlock<Block> AJI_AMARILLO_SILVESTRE = registerBlock("aji_amarillo_silvestre",
+            () -> new PlantaSilvestreBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion().noCollission().instabreak().ofFullCopy(Blocks.ALLIUM)));
+    public static final DeferredBlock<Block> KION_SILVESTRE = registerBlock("kion_silvestre",
+            () -> new PlantaSilvestreBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion().noCollission().instabreak().ofFullCopy(Blocks.ALLIUM)));
+    public static final DeferredBlock<Block> SOYA_SILVESTRE = registerBlock("soya_silvestre",
+            () -> new PlantaSilvestreBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion().noCollission().instabreak().ofFullCopy(Blocks.ALLIUM)));
+    public static final DeferredBlock<Block> CAMOTE_SILVESTRE = registerBlock("camote_silvestre",
+            () -> new PlantaSilvestreBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion().noCollission().instabreak().ofFullCopy(Blocks.ALLIUM)));
+    public static final DeferredBlock<Block> YUCA_SILVESTRE = registerBlock("yuca_silvestre",
+            () -> new PlantaSilvestreBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion().noCollission().instabreak().ofFullCopy(Blocks.ALLIUM)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

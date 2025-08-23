@@ -85,13 +85,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.PALTO_BUTTON, ModBlocks.PALTO_PLANKS);
         buttonItem(ModBlocks.LIMONERO_BUTTON, ModBlocks.LIMONERO_PLANKS);
 
-        //simpleBlockItemBlockTexture(ModBlocks.AJI_AMARILLO_SILVESTRE);
-        //simpleBlockItemBlockTexture(ModBlocks.KION_SILVESTRE);
-        //simpleBlockItemBlockTexture(ModBlocks.SOYA_SILVESTRE);
-        //simpleBlockItemBlockTexture(ModBlocks.CAMOTE_SILVESTRE);
-        //simpleBlockItemBlockTexture(ModBlocks.YUCA_SILVESTRE);
+        simpleBlockItemBlockTexture(ModBlocks.AJI_AMARILLO_SILVESTRE);
+        simpleBlockItemBlockTexture(ModBlocks.KION_SILVESTRE);
+        simpleBlockItemBlockTexture(ModBlocks.SOYA_SILVESTRE);
+        simpleBlockItemBlockTexture(ModBlocks.CAMOTE_SILVESTRE);
+        simpleBlockItemBlockTexture(ModBlocks.YUCA_SILVESTRE);
 
         //withExistingParent(ModItems.ATUN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(PeruviansDelight.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {

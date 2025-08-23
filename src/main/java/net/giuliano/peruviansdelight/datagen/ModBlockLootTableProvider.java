@@ -122,6 +122,25 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.PALTO_DOOR.get(),
                 block -> createDoorTable(ModBlocks.PALTO_DOOR.get()));
         dropSelf(ModBlocks.PALTO_TRAPDOOR.get());
+
+        add(ModBlocks.AJI_AMARILLO_SILVESTRE.get(), block ->
+                createModFlowersDrops(block, ModItems.AJI_AMARILLO.get(), 2.0F, 2.25F, 2.6667F, 3.0F));
+        add(ModBlocks.KION_SILVESTRE.get(), block ->
+                createModFlowersDrops(block, ModItems.KION.get(), 2.0F, 2.25F, 2.6667F, 3.0F));
+        add(ModBlocks.SOYA_SILVESTRE.get(), block ->
+                createModFlowersDrops(block, ModItems.VAINA_SOYA.get(), 2.0F, 2.25F, 2.6667F, 3.0F));
+        add(ModBlocks.CAMOTE_SILVESTRE.get(), block ->
+                createModFlowersDrops(block, ModItems.CAMOTE.get(), 2.0F, 2.25F, 2.6667F, 3.0F));
+        add(ModBlocks.YUCA_SILVESTRE.get(), block ->
+                createModFlowersDrops(block, ModItems.YUCA.get(), 2.0F, 2.25F, 2.6667F, 3.0F));
+    }
+
+    protected LootTable.Builder createModFlowersDrops(Block flowerBlock, Item dropItem, float... chances) {
+        return createSilkTouchOrShearsDispatchTable(flowerBlock,
+                this.applyExplosionCondition(flowerBlock, LootItem.lootTableItem(dropItem)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0F))))
+                        .when(BonusLevelTableCondition.bonusLevelFlatChance(
+                                registrylookup.getOrThrow(Enchantments.FORTUNE), chances)));
     }
 
     protected LootTable.Builder createModCropDrops(Block cropBlock, Item grownCropItem, Item seedsItem, LootItemCondition.Builder dropGrownCropCondition) {
@@ -147,8 +166,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     protected LootTable.Builder createModLeavesDrops(Block leavesBlock, Item dropItem, float... chances) {
         return this.createSilkTouchOrShearsDispatchTable(leavesBlock,
-                        this.applyExplosionCondition(leavesBlock,
-                                        LootItem.lootTableItem(dropItem))
+                        this.applyExplosionCondition(leavesBlock, LootItem.lootTableItem(dropItem))
                                 .when(BonusLevelTableCondition.bonusLevelFlatChance(
                                         registrylookup.getOrThrow(Enchantments.FORTUNE), chances)))
                 .withPool(LootPool.lootPool()
