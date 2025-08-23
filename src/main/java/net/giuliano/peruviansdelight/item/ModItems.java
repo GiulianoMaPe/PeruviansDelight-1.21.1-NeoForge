@@ -5,6 +5,7 @@ import net.giuliano.peruviansdelight.block.ModBlocks;
 import net.giuliano.peruviansdelight.item.custom.DrinkFoil;
 import net.giuliano.peruviansdelight.item.custom.ModBowlFood;
 import net.giuliano.peruviansdelight.item.custom.ModDrinkItems;
+import net.giuliano.peruviansdelight.item.custom.PaltaFoodItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
@@ -86,8 +87,10 @@ public class ModItems {
             Item::new, new Item.Properties().food(ModFoodProperties.FILETE_ATUN));
     public static final DeferredItem<Item> FILETE_ATUN_COCIDO = ITEMS.registerItem("filete_atun_cocido",
             Item::new, new Item.Properties().food(ModFoodProperties.FILETE_ATUN_COCIDO));
+
     public static final DeferredItem<Item> PALTA = ITEMS.registerItem("palta",
-            Item::new, new Item.Properties().food(ModFoodProperties.PALTA));
+            PaltaFoodItem::new, new Item.Properties().food(ModFoodProperties.PALTA));
+
     public static final DeferredItem<Item> PALTA_CORTADA = ITEMS.registerItem("palta_cortada",
             Item::new, new Item.Properties().food(ModFoodProperties.PALTA_CORTADA));
     public static final DeferredItem<Item> PAPAS_CORTADAS = ITEMS.registerItem("papas_cortadas",

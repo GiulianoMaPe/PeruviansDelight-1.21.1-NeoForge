@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_limonero_wood": {
+    "has_limonero_log": {
       "conditions": {
         "items": [
           {
-            "items": "peruviansdelight:limonero_wood"
+            "items": "peruviansdelight:limonero_log"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_limonero_wood"
+      "has_limonero_log"
     ]
   ],
   "rewards": {

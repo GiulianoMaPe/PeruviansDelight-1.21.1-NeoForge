@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "peruviansdelight:huancaina"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:papa_huancaina"
+  }
+}

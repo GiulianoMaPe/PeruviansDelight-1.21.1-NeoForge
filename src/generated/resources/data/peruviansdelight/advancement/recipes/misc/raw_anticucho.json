@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_limonero_log": {
+    "has_raw_heart_slices": {
       "conditions": {
         "items": [
           {
-            "items": "peruviansdelight:limonero_log"
+            "items": "peruviansdelight:raw_heart_slices"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "peruviansdelight:limonero_wood"
+        "recipe": "peruviansdelight:raw_anticucho"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_limonero_log"
+      "has_raw_heart_slices"
     ]
   ],
   "rewards": {
     "recipes": [
-      "peruviansdelight:limonero_wood"
+      "peruviansdelight:raw_anticucho"
     ]
   }
 }

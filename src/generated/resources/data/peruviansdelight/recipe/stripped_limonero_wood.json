@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "S": {
-      "item": "peruviansdelight:limonero_log"
+      "item": "peruviansdelight:stripped_limonero_log"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 3,
-    "id": "peruviansdelight:limonero_wood"
+    "id": "peruviansdelight:stripped_limonero_wood"
   }
 }

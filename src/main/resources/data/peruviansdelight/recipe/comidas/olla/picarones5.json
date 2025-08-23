@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "peruviansdelight:masa_picarones"
+    },
+    {
+      "item": "peruviansdelight:masa_picarones"
+    },
+    {
+      "item": "peruviansdelight:masa_picarones"
+    },
+    {
+      "item": "peruviansdelight:masa_picarones"
+    },
+    {
+      "item": "peruviansdelight:masa_picarones"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "count": 5,
+    "id": "peruviansdelight:picarones"
+  }
+}

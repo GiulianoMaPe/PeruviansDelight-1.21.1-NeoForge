@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "peruviansdelight:palta"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "peruviansdelight:palta_cortada"
+      }
+    },
+    {
+      "item": {
+        "count": 1,
+        "id": "peruviansdelight:semilla_palta"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

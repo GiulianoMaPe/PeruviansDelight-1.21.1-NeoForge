@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "peruviansdelight:atun"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "peruviansdelight:filete_atun"
+      }
+    },
+    {
+      "item": {
+        "count": 2,
+        "id": "minecraft:bone_meal"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

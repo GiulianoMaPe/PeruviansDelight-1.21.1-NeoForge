@@ -1,0 +1,41 @@
+{
+  {
+    "tag": "c:foods/raw_beef"
+  },
+  {
+    "tag": "c:foods/raw_fish"
+  },
+  {
+    "tag": "c:foods/raw_chicken"
+  },
+  {
+    "tag": "c:foods/bread"
+  },
+  {
+    "tag": "c:eggs"
+  },
+  {
+    "tag": "c:foods/cooked_bacon"
+  },
+  {
+    "tag": "c:foods/cooked_chicken"
+  },
+  {
+    "tag": "c:foods/cooked_egg"
+  },
+  {
+    "tag": "c:foods/leafy_green"    //LECHUGA
+  },
+  {
+    "tag": "c:crops/tomato"
+  },
+  {
+    "tag": "c:crops/onion"
+  },
+  {
+    "tag": "c:foods/pasta"
+  },
+  {
+    "tag": "c:crops/rice"
+  }
+}

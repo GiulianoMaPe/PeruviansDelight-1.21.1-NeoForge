@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "peruviansdelight:chaufa"
+    },
+    {
+      "tag": "c:foods/pasta"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:aeropuerto"
+  }
+}

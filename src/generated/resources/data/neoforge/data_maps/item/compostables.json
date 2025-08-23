@@ -6,8 +6,20 @@
     "peruviansdelight:camote": {
       "chance": 0.65
     },
-    "peruviansdelight:chicharron_pota": {
-      "chance": 0.8
+    "peruviansdelight:camote_cocido": {
+      "chance": 0.85
+    },
+    "peruviansdelight:camote_cortado": {
+      "chance": 0.5
+    },
+    "peruviansdelight:camote_frito": {
+      "chance": 0.7
+    },
+    "peruviansdelight:gajo_limon": {
+      "chance": 0.3
+    },
+    "peruviansdelight:granos_soya": {
+      "chance": 0.3
     },
     "peruviansdelight:kion": {
       "chance": 0.65
@@ -18,17 +30,32 @@
     "peruviansdelight:palta": {
       "chance": 0.65
     },
-    "peruviansdelight:papas_cortadas": {
-      "chance": 0.45
+    "peruviansdelight:palta_cortada": {
+      "chance": 0.5
     },
-    "peruviansdelight:tentaculo_pota": {
-      "chance": 0.65
+    "peruviansdelight:papas_cortadas": {
+      "chance": 0.5
+    },
+    "peruviansdelight:semilla_palta": {
+      "chance": 0.3
+    },
+    "peruviansdelight:semillas_aji_amarillo": {
+      "chance": 0.3
+    },
+    "peruviansdelight:semillas_limon": {
+      "chance": 0.3
     },
     "peruviansdelight:vaina_soya": {
       "chance": 0.65
     },
     "peruviansdelight:yuca": {
       "chance": 0.65
+    },
+    "peruviansdelight:yuca_cortada": {
+      "chance": 0.5
+    },
+    "peruviansdelight:yuca_frita": {
+      "chance": 0.7
     }
   }
 }

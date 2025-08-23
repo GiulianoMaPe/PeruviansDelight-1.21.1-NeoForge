@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    [
+      {
+        "item": "peruviansdelight:aji_amarillo"
+      },
+      {
+        "item": "peruviansdelight:pote_aji_amarillo"
+      }
+    ],
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "item": "peruviansdelight:palta_cortada"
+    },
+    {
+      "item": "peruviansdelight:filete_atun_cocido"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:causa_atun"
+  }
+}

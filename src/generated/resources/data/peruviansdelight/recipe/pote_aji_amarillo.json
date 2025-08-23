@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:glass_bottle"
+    },
+    "S": {
+      "item": "peruviansdelight:aji_amarillo"
+    }
+  },
+  "pattern": [
+    "#S#"
+  ],
+  "result": {
+    "count": 2,
+    "id": "peruviansdelight:pote_aji_amarillo"
+  }
+}

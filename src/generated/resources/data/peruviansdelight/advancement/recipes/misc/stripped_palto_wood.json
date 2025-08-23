@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_limonero_log": {
+    "has_stripped_palto_log": {
       "conditions": {
         "items": [
           {
-            "items": "peruviansdelight:limonero_log"
+            "items": "peruviansdelight:stripped_palto_log"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "peruviansdelight:limonero_wood"
+        "recipe": "peruviansdelight:stripped_palto_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_limonero_log"
+      "has_stripped_palto_log"
     ]
   ],
   "rewards": {
     "recipes": [
-      "peruviansdelight:limonero_wood"
+      "peruviansdelight:stripped_palto_wood"
     ]
   }
 }

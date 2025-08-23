@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/pasta"
+    },
+    {
+      "item": "peruviansdelight:sillao"
+    },
+    {
+      "item": "peruviansdelight:aji_amarillo"
+    },
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:crops/tomato"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:tallarin_saltado"
+  }
+}

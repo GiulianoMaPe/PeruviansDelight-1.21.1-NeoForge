@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "peruviansdelight:camote_frito"
+    },
+    {
+      "item": "peruviansdelight:aji_amarillo"
+    },
+    {
+      "tag": "c:foods/raw_fish"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "item": "peruviansdelight:gajo_limon"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:ceviche"
+  }
+}

@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_limonero_log": {
+    "has_chaufa": {
       "conditions": {
         "items": [
           {
-            "items": "peruviansdelight:limonero_log"
+            "items": "peruviansdelight:chaufa"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pollo_brasa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "peruviansdelight:pollo_brasa"
           }
         ]
       },
@@ -13,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "peruviansdelight:limonero_wood"
+        "recipe": "peruviansdelight:mostrito"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_limonero_log"
+      "has_pollo_brasa",
+      "has_chaufa"
     ]
   ],
   "rewards": {
     "recipes": [
-      "peruviansdelight:limonero_wood"
+      "peruviansdelight:mostrito"
     ]
   }
 }

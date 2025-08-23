@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "peruviansdelight:papas_cortadas"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}
