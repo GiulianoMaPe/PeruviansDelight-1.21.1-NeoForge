@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#peruviansdelight:spawn_crops_in",
+  "features": "peruviansdelight:yuca_silvestre_placed",
+  "step": "vegetal_decoration"
+}

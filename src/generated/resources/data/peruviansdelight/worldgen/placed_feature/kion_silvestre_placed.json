@@ -1,0 +1,28 @@
+{
+  "feature": "peruviansdelight:kion_silvestre",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 120
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "peruviansdelight:kion_silvestre"
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
