@@ -108,5 +108,8 @@
   "block.peruviansdelight.lemon_crate": "Lemon Crate",
   "block.peruviansdelight.avocado_crate": "Avocado Crate",
   "block.peruviansdelight.ginger_crate": "Ginger Crate",
-  "block.peruviansdelight.soybean_pod_crate": "Soybean Pod Crate"
+  "block.peruviansdelight.soybean_pod_crate": "Soybean Pod Crate",
+
+  "entity.mccourse.atun": "Tuna",
+  "entity.peruviansdelight.atun": "Tuna"
 }

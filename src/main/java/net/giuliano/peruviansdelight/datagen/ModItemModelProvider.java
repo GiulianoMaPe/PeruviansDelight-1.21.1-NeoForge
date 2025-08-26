@@ -67,8 +67,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SILLAO.get());
         basicItem(ModItems.HUANCAINA.get());
 
-        //basicItem(ModItems.ATUN_BUCKET.get());
-
         basicItem(ModItems.VAINA_SOYA.get());
         basicItem(ModItems.GRANOS_SOYA.get());
         basicItem(ModItems.SEMILLAS_AJI_AMARILLO.get());
@@ -91,7 +89,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.CAMOTE_SILVESTRE);
         simpleBlockItemBlockTexture(ModBlocks.YUCA_SILVESTRE);
 
-        //withExistingParent(ModItems.ATUN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        basicItem(ModItems.ATUN_BUCKET.get());
+        withExistingParent(ModItems.ATUN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder simpleBlockItemBlockTexture(DeferredBlock<Block> item) {

@@ -2,14 +2,20 @@ package net.giuliano.peruviansdelight.item;
 
 import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.block.ModBlocks;
+import net.giuliano.peruviansdelight.entity.ModEntities;
 import net.giuliano.peruviansdelight.item.custom.DrinkFoil;
 import net.giuliano.peruviansdelight.item.custom.ModBowlFood;
 import net.giuliano.peruviansdelight.item.custom.ModDrinkItems;
 import net.giuliano.peruviansdelight.item.custom.PaltaFoodItem;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.MobBucketItem;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.material.Fluids;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -111,8 +117,6 @@ public class ModItems {
     public static final DeferredItem<Item> HUANCAINA = ITEMS.registerItem("huancaina",
             Item::new, new Item.Properties().stacksTo(16));
 
-    //ATUN_BUCKET
-
     public static final DeferredItem<Item> VAINA_SOYA = ITEMS.registerItem("vaina_soya",
             Item::new, new Item.Properties());
 
@@ -134,6 +138,14 @@ public class ModItems {
             Item::new, new Item.Properties());
     public static final DeferredItem<Item> PICARONES = ITEMS.registerItem("picarones",
             Item::new, new Item.Properties().food(ModFoodProperties.PICARONES));
+
+    //MOBS
+    public static final DeferredItem<Item> ATUN_BUCKET = ITEMS.register("atun_bucket",
+            () -> new MobBucketItem(ModEntities.ATUN.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH,
+                    new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> ATUN_SPAWN_EGG = ITEMS.register("atun_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.ATUN, 0xb4d4e1, 0x195a75,
+                    new Item.Properties()));
 
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);

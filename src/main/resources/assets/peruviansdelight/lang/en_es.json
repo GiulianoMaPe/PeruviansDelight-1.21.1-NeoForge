@@ -100,5 +100,8 @@
   "block.peruviansdelight.kion_silvestre": "Kion silvestre",
   "block.peruviansdelight.soya_silvestre": "Soya silvestre",
   "block.peruviansdelight.camote_silvestre": "Camote silvestre",
-  "block.peruviansdelight.yuca_silvestre": "Yuca silvestre"
+  "block.peruviansdelight.yuca_silvestre": "Yuca silvestre",
+
+  "entity.mccourse.atun": "Atún",
+  "entity.peruviansdelight.atun": "Atún"
 }

@@ -1,9 +1,12 @@
 package net.giuliano.peruviansdelight;
 
 import net.giuliano.peruviansdelight.block.ModBlocks;
+import net.giuliano.peruviansdelight.entity.ModEntities;
+import net.giuliano.peruviansdelight.entity.client.AtunRenderer;
 import net.giuliano.peruviansdelight.event.ModEvents;
 import net.giuliano.peruviansdelight.item.ModCreativeModeTabs;
 import net.giuliano.peruviansdelight.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -43,6 +46,7 @@ public class PeruviansDelight {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -71,7 +75,7 @@ public class PeruviansDelight {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.ATUN.get(), AtunRenderer::new);
         }
     }
 }

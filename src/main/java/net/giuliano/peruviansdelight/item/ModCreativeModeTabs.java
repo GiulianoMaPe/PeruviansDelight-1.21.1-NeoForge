@@ -67,13 +67,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SILLAO.get());
                         output.accept(ModItems.HUANCAINA.get());
 
-                        //output.accept(ModItems.ATUN_BUCKET.get());
+                        output.accept(ModItems.ATUN_BUCKET.get());
 
                         output.accept(ModItems.VAINA_SOYA.get());
                         output.accept(ModItems.GRANOS_SOYA.get());
                         output.accept(ModItems.SEMILLAS_AJI_AMARILLO.get());
 
-                        //output.accept(ModItems.ATUN_SPAWN_EGG.get());
+                        output.accept(ModItems.ATUN_SPAWN_EGG.get());
 
                         output.accept(ModBlocks.SEMILLA_PALTA.get());
                         output.accept(ModBlocks.SEMILLAS_LIMON.get());
