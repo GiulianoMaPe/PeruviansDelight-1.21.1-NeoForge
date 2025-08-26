@@ -1,16 +1,19 @@
 package net.giuliano.peruviansdelight.entity.custom;
 
+import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.item.ModItems;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.AbstractSchoolingFish;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.loot.LootTable;
 import org.jetbrains.annotations.Nullable;
 
 public class AtunEntity extends AbstractSchoolingFish {
@@ -24,13 +27,6 @@ public class AtunEntity extends AbstractSchoolingFish {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-    }
-
-    public static AttributeSupplier.Builder createAttributes() {
-        return AbstractSchoolingFish.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 10D)
-                .add(Attributes.MOVEMENT_SPEED, 0.25D)
-                .add(Attributes.FOLLOW_RANGE, 24D);
     }
 
     @Override
@@ -63,6 +59,14 @@ public class AtunEntity extends AbstractSchoolingFish {
         else {
             --this.idleAnimationTimeout;
         }
+    }
+
+    @Override
+    protected ResourceKey<LootTable> getDefaultLootTable() {
+        return ResourceKey.create(
+                Registries.LOOT_TABLE,
+                ResourceLocation.fromNamespaceAndPath(PeruviansDelight.MOD_ID, "entities/atun")
+        );
     }
 
     @Override

@@ -11,9 +11,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import vectorwing.farmersdelight.FarmersDelight;
-import vectorwing.farmersdelight.common.tag.CommonTags;
-import vectorwing.farmersdelight.common.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -57,6 +54,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PALTO_PLANKS.get(), 4)
                 .requires(anyOf(ModBlocks.PALTO_LOG, ModBlocks.PALTO_WOOD, ModBlocks.STRIPPED_PALTO_LOG, ModBlocks.STRIPPED_PALTO_WOOD))
                 .unlockedBy("has_limonero_log", has(ModBlocks.PALTO_LOG))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STRING, 4)
+                .requires(ItemTags.WOOL)
+                .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .save(recipeOutput);
 
         //COMIDAS

@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-22T23:18:45.3416365	Recipes
+// 1.21.1	2025-08-26T23:34:04.8714	Recipes
 aa232cd5fc675342b4fa8422a61ab5c2fe73e79f data/minecraft/advancement/recipes/misc/anticucho_from_campfire_cooking.json
 2d62f908dcc63d693ce6434851761d3d155e4267 data/minecraft/advancement/recipes/misc/anticucho_from_smelting.json
 f950fbbd2a0cc48f33189749334f94c4df4c0fb0 data/minecraft/advancement/recipes/misc/anticucho_from_smoking.json
@@ -17,6 +17,7 @@ cbea933516cc2accff79b5eda43a7b8877ef102d data/minecraft/advancement/recipes/misc
 46e41a66342ce2a82bdabb7dfca9509dbea220cb data/minecraft/advancement/recipes/misc/papas_fritas_from_campfire_cooking.json
 7be395970d74e3d4bee24bfad4609dd8e72b7521 data/minecraft/advancement/recipes/misc/papas_fritas_from_smelting.json
 676ea55722b512527f621feb950ecb91ff63e79d data/minecraft/advancement/recipes/misc/papas_fritas_from_smoking.json
+e25f8337b48d1318f20318e44e1cb75e2075a6bf data/minecraft/advancement/recipes/misc/string.json
 786097c0235da3bfea528ca29ef6df943abbae11 data/minecraft/advancement/recipes/misc/yuca_frita_from_campfire_cooking.json
 535416edeaa729f7e3be14c9cb722c0965cda46e data/minecraft/advancement/recipes/misc/yuca_frita_from_smelting.json
 5bf8733e10fd01a2f64afc58c85f79da8f06ff43 data/minecraft/advancement/recipes/misc/yuca_frita_from_smoking.json
@@ -38,6 +39,7 @@ ca93b3eac4274f294b53497e846ba00930046124 data/minecraft/recipe/filete_atun_cocid
 c5e221c3128c314f002d1d2a0a2a7132f027e24b data/minecraft/recipe/papas_fritas_from_campfire_cooking.json
 fadfbc0d7dfba4b2bd671a669ffe7a653797ec65 data/minecraft/recipe/papas_fritas_from_smelting.json
 ca3301b4ee6d89034f45f338c633e05890a2ad38 data/minecraft/recipe/papas_fritas_from_smoking.json
+df35d6e2bb36d397b2cfa0dc25bbc0f679f8266a data/minecraft/recipe/string.json
 b1028a3b4ef7c3db6bfeb8f82b034517bfc81ff5 data/minecraft/recipe/yuca_frita_from_campfire_cooking.json
 8b6eb6af4031d6c4cba0ab8d237ed315ff9552f6 data/minecraft/recipe/yuca_frita_from_smelting.json
 3d268eff2f0d27f171c84c28e59c74725bfe643a data/minecraft/recipe/yuca_frita_from_smoking.json

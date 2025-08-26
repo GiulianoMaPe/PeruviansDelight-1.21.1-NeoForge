@@ -1,0 +1,12 @@
+{
+  "type": "peruviansdelight:add_random_count_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:entities/squid"
+    }
+  ],
+  "item": "peruviansdelight:tentaculo_pota",
+  "maxCount": 8,
+  "minCount": 6
+}
