@@ -135,6 +135,11 @@ dependencies {
 
     localRuntime "curse.maven:appleskin-248787:6616291"
 
+    //COMPATIBILIDADES
+    //localRuntime "curse.maven:casualness-delight-909519:5853751"
+    //localRuntime "curse.maven:cultural-delights-574622:6659969"
+    //localRuntime "curse.maven:more-delight-forge-977515:6822138"
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"

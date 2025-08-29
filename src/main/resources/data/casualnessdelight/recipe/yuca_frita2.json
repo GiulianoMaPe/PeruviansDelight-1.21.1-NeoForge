@@ -1,0 +1,13 @@
+{
+  "type": "casualness_delight:deep_frying",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "peruviansdelight:yuca_cortada"
+  },
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:yuca_frita"
+  }
+}

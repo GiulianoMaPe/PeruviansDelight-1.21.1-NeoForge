@@ -6,7 +6,8 @@ import net.minecraft.world.food.FoodProperties;
 
 public class ModFoodProperties {
 
-    public static final FoodProperties INCA_KOLA = new FoodProperties.Builder().fast().alwaysEdible().nutrition(4).saturationModifier(1f)
+    public static final FoodProperties INCA_KOLA = new FoodProperties.Builder().fast().alwaysEdible().nutrition(4)
+            .saturationModifier(1f)
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 1), 1f)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 1000, 2), 1f)
             .build();

@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "moredelight"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "moredelight:diced_potatoes"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:papas_cortadas"
+  }
+}

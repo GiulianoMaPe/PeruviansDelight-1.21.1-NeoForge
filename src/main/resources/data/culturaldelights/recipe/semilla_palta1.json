@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "culturaldelights:avocado_pit"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "peruviansdelight:semilla_palta"
+  }
+}
