@@ -37,5 +37,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(Tags.Items.FOODS_RAW_FISH)
                 .add(ModItems.FILETE_ATUN.get());
+
+        tag(ItemTags.MEAT)  //Alimentar Lobos
+                .add(ModItems.CAMOTE_COCIDO.get());
     }
 }

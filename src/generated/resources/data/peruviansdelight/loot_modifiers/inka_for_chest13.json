@@ -1,0 +1,14 @@
+{
+  "type": "peruviansdelight:add_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_armorer"
+    },
+    {
+      "chance": 0.1,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "peruviansdelight:inca_kola"
+}
