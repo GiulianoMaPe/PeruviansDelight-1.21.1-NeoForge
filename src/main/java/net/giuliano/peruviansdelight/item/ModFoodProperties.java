@@ -3,6 +3,7 @@ package net.giuliano.peruviansdelight.item;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import vectorwing.farmersdelight.common.registry.ModEffects; //COMFORT y NOURISHMENT -> 6000 = 5 min / 3600 = 3 min / 1200 = 1 min
 
 public class ModFoodProperties {
 
@@ -13,30 +14,39 @@ public class ModFoodProperties {
             .build();
 
     public static final FoodProperties CAUSA = new FoodProperties.Builder().nutrition(14)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 1), 1f)
             .saturationModifier(0.8f).build();
     public static final FoodProperties CAUSA_ATUN = new FoodProperties.Builder().nutrition(14)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 1), 1f)
             .saturationModifier(0.8f).build();
     public static final FoodProperties CHAUFA = new FoodProperties.Builder().nutrition(12)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 1), 1f)
             .saturationModifier(0.9f).build();
     public static final FoodProperties TALLARIN_SALTADO = new FoodProperties.Builder().nutrition(10)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 1), 1f)
             .saturationModifier(0.9f).build();
     public static final FoodProperties LOMO_SALTADO = new FoodProperties.Builder().nutrition(10)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 1), 1f)
             .saturationModifier(0.9f).build();
     public static final FoodProperties POLLO_BRASA = new FoodProperties.Builder().nutrition(12)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 6000, 1), 1f)
             .saturationModifier(0.9f).build();
     public static final FoodProperties CEVICHE = new FoodProperties.Builder().nutrition(8)
             .saturationModifier(1f).build();
     public static final FoodProperties AEROPUERTO = new FoodProperties.Builder().nutrition(14)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 6000, 1), 1f)
             .saturationModifier(0.9f).build();
     public static final FoodProperties MOSTRITO = new FoodProperties.Builder().nutrition(16)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 6000, 1), 1f)
             .saturationModifier(0.75f).build();
     public static final FoodProperties PAPA_HUANCAINA = new FoodProperties.Builder().nutrition(10)
             .saturationModifier(0.8f).build();
 
     public static final FoodProperties TOCOSH = new FoodProperties.Builder().nutrition(8).fast()
             .saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 200, 3), 1f)
-            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 200, 1), 1f)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT, 6000, 1), 1f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 600, 3), 1f)
+            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 300, 1), 1f)
             .build();
 
     public static final FoodProperties AJI_AMARILLO = new FoodProperties.Builder().nutrition(2).fast()
@@ -101,4 +111,11 @@ public class ModFoodProperties {
 
     public static final FoodProperties PICARONES = new FoodProperties.Builder().nutrition(8)
             .saturationModifier(1f).build();
+
+    public static final FoodProperties CHULETA_CORTADA = new FoodProperties.Builder().nutrition(4)
+            .saturationModifier(0.6f).build();
+    public static final FoodProperties CHICHARRON = new FoodProperties.Builder().nutrition(4)
+            .saturationModifier(1f).build();
+    public static final FoodProperties PAN_CHICHARRON = new FoodProperties.Builder().nutrition(10)
+            .saturationModifier(0.8f).build();
 }

@@ -23,6 +23,8 @@ public class ModDrinkItems extends Item {
 
     @Override
     public ItemStack finishUsingItem(ItemStack stack, net.minecraft.world.level.Level level, net.minecraft.world.entity.LivingEntity entity) {
+        super.finishUsingItem(stack, level, entity);
+
         if (entity instanceof net.minecraft.world.entity.player.Player player) {
             if (!player.getAbilities().instabuild) {
                 stack.shrink(1);

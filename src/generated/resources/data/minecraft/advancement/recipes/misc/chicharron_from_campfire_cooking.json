@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chuleta_cortada": {
+      "conditions": {
+        "items": [
+          {
+            "items": "peruviansdelight:chuleta_cortada"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chicharron_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chuleta_cortada"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chicharron_from_campfire_cooking"
+    ]
+  }
+}
