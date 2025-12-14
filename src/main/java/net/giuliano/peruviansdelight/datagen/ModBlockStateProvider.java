@@ -99,6 +99,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.CAMOTE_SILVESTRE.get())).renderType("cutout"));
         simpleBlockWithItem(ModBlocks.YUCA_SILVESTRE.get(), models().cross(blockTexture(ModBlocks.YUCA_SILVESTRE.get()).getPath(),
                 blockTexture(ModBlocks.YUCA_SILVESTRE.get())).renderType("cutout"));
+
+        crateBlock(ModBlocks.AJI_AMARILLO_CRATE);
+        crateBlock(ModBlocks.CAMOTE_CRATE);
+        crateBlock(ModBlocks.KION_CRATE);
+        crateBlock(ModBlocks.LIMON_CRATE);
+        crateBlock(ModBlocks.PALTA_CRATE);
+        crateBlock(ModBlocks.SOYA_CRATE);
+        crateBlock(ModBlocks.YUCA_CRATE);
+
+        bagBlock(ModBlocks.SOYA_BAG);
     }
 
     public void makeCrop1(CropBlock block, String modelName, String textureName) {
@@ -199,5 +209,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("peruviansdelight:block/" + deferredBlock.getId().getPath() + appendix));
+    }
+
+    public void crateBlock(DeferredBlock<?> deferredBlock) {
+        String name = deferredBlock.getId().getPath();
+
+        simpleBlock(deferredBlock.get(), models().cubeBottomTop(
+                name,
+                modLoc("block/" + name + "_side"),
+                modLoc("block/crate_bottom"),
+                modLoc("block/" + name + "_top")
+        ));
+
+        blockItem(deferredBlock);
+    }
+
+    public void bagBlock(DeferredBlock<?> deferredBlock) {
+        String name = deferredBlock.getId().getPath();
+
+        simpleBlock(deferredBlock.get(), models().cube(
+                name,
+                modLoc("block/bag_bottom"),
+                modLoc("block/" + name + "_top"),
+                modLoc("block/bag_side_tied"),
+                modLoc("block/bag_side_tied"),
+                modLoc("block/bag_side"),
+                modLoc("block/bag_side")
+        ).texture("particle", modLoc("block/bag_side")));
+
+        blockItem(deferredBlock);
     }
 }

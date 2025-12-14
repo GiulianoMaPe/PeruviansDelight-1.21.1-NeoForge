@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -214,6 +215,31 @@ public class ModBlocks {
     public static final DeferredBlock<Block> YUCA_SILVESTRE = registerBlock("yuca_silvestre",
             () -> new PlantaSilvestreBlock(BlockBehaviour.Properties.of()
                     .noOcclusion().noCollission().instabreak().ofFullCopy(Blocks.ALLIUM)));
+
+    // CRATES
+    public static final DeferredBlock<Block> AJI_AMARILLO_CRATE = registerBlock("aji_amarillo_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> CAMOTE_CRATE = registerBlock("camote_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> KION_CRATE = registerBlock("kion_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> LIMON_CRATE = registerBlock("limon_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> PALTA_CRATE = registerBlock("palta_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> SOYA_CRATE = registerBlock("soya_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> SOYA_BAG = registerBlock("soya_bag",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> YUCA_CRATE = registerBlock("yuca_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

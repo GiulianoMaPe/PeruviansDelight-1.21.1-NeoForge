@@ -133,6 +133,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createModFlowersDrops(block, ModItems.CAMOTE.get(), 2.0F, 2.25F, 2.6667F, 3.0F));
         add(ModBlocks.YUCA_SILVESTRE.get(), block ->
                 createModFlowersDrops(block, ModItems.YUCA.get(), 2.0F, 2.25F, 2.6667F, 3.0F));
+
+        dropSelf(ModBlocks.AJI_AMARILLO_CRATE.get());
+        dropSelf(ModBlocks.CAMOTE_CRATE.get());
+        dropSelf(ModBlocks.KION_CRATE.get());
+        dropSelf(ModBlocks.LIMON_CRATE.get());
+        dropSelf(ModBlocks.PALTA_CRATE.get());
+        dropSelf(ModBlocks.SOYA_CRATE.get());
+        dropSelf(ModBlocks.SOYA_BAG.get());
+        dropSelf(ModBlocks.YUCA_CRATE.get());
     }
 
     protected LootTable.Builder createModFlowersDrops(Block flowerBlock, Item dropItem, float... chances) {
