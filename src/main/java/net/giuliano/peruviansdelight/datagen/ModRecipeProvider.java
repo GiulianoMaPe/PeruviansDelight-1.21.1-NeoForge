@@ -61,6 +61,96 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_wool", has(ItemTags.WOOL))
                 .save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AJI_AMARILLO_CRATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.AJI_AMARILLO.get())
+                .unlockedBy("has_aji_amarillo", has(ModItems.AJI_AMARILLO))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AJI_AMARILLO, 9)
+                .requires(ModBlocks.AJI_AMARILLO_CRATE.get())
+                .unlockedBy("has_aji_amarillo_crate", has(ModBlocks.AJI_AMARILLO_CRATE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CAMOTE_CRATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.CAMOTE.get())
+                .unlockedBy("has_camote", has(ModItems.CAMOTE))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CAMOTE, 9)
+                .requires(ModBlocks.CAMOTE_CRATE.get())
+                .unlockedBy("has_camote_crate", has(ModBlocks.CAMOTE_CRATE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.KION_CRATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.KION.get())
+                .unlockedBy("has_kion", has(ModItems.KION))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.KION, 9)
+                .requires(ModBlocks.KION_CRATE.get())
+                .unlockedBy("has_kion_crate", has(ModBlocks.KION_CRATE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIMON_CRATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.LIMON.get())
+                .unlockedBy("has_limon", has(ModItems.LIMON))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIMON, 9)
+                .requires(ModBlocks.LIMON_CRATE.get())
+                .unlockedBy("has_limon_crate", has(ModBlocks.LIMON_CRATE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PALTA_CRATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.PALTA.get())
+                .unlockedBy("has_palta", has(ModItems.PALTA))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PALTA, 9)
+                .requires(ModBlocks.PALTA_CRATE.get())
+                .unlockedBy("has_palta_crate", has(ModBlocks.PALTA_CRATE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOYA_CRATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.VAINA_SOYA.get())
+                .unlockedBy("has_vaina_soya", has(ModItems.VAINA_SOYA))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VAINA_SOYA, 9)
+                .requires(ModBlocks.SOYA_CRATE.get())
+                .unlockedBy("has_soya_crate", has(ModBlocks.SOYA_CRATE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YUCA_CRATE.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.YUCA.get())
+                .unlockedBy("has_yuca", has(ModItems.YUCA))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YUCA, 9)
+                .requires(ModBlocks.YUCA_CRATE.get())
+                .unlockedBy("has_yuca_crate", has(ModBlocks.YUCA_CRATE))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOYA_BAG.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.GRANOS_SOYA.get())
+                .unlockedBy("has_granos_soya", has(ModItems.GRANOS_SOYA))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRANOS_SOYA, 9)
+                .requires(ModBlocks.SOYA_BAG.get())
+                .unlockedBy("has_soya_bag", has(ModBlocks.SOYA_BAG))
+                .save(recipeOutput, "granos_soya_from_soya_bag");
+
         //COMIDAS
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MOSTRITO.get(), 2)
                 .requires(ModItems.POLLO_BRASA)
