@@ -216,7 +216,7 @@ public class ModBlocks {
             () -> new PlantaSilvestreBlock(BlockBehaviour.Properties.of()
                     .noOcclusion().noCollission().instabreak().ofFullCopy(Blocks.ALLIUM)));
 
-    // CRATES
+    // CRATES Y BAGS
     public static final DeferredBlock<Block> AJI_AMARILLO_CRATE = registerBlock("aji_amarillo_crate",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
@@ -235,11 +235,12 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SOYA_CRATE = registerBlock("soya_crate",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
-    public static final DeferredBlock<Block> SOYA_BAG = registerBlock("soya_bag",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
     public static final DeferredBlock<Block> YUCA_CRATE = registerBlock("yuca_crate",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+
+    public static final DeferredBlock<Block> SOYA_BAG = registerBlock("soya_bag",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

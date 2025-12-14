@@ -235,7 +235,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/bag_side_tied"),
                 modLoc("block/bag_side"),
                 modLoc("block/bag_side")
-        ).texture("particle", modLoc("block/bag_side")));
+        ).texture("particle", modLoc("block/" + name + "_top")));
 
         blockItem(deferredBlock);
     }
