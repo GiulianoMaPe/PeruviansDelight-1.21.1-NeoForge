@@ -189,6 +189,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.GLASS_BOTTLE)
                 .unlockedBy("has_granos_soya", has(ModItems.GRANOS_SOYA))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.SEMILLAS_LIMON.get())
+                .requires(ModItems.LIMON)
+                .unlockedBy("has_limon", has(ModItems.LIMON))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.SEMILLA_PALTA.get())
+                .requires(ModItems.PALTA)
+                .unlockedBy("has_palta", has(ModItems.PALTA))
+                .save(recipeOutput);
 
         // COCCION DE INGREDIENTES
         createFoodCookingRecipes(recipeOutput, ModItems.RAW_ANTICUCHO, ModItems.ANTICUCHO, 0.35f);

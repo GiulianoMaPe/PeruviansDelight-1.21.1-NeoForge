@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-14T17:51:20.7884582	Recipes
+// 1.21.1	2025-12-16T00:54:30.3397859	Recipes
 aa232cd5fc675342b4fa8422a61ab5c2fe73e79f data/minecraft/advancement/recipes/misc/anticucho_from_campfire_cooking.json
 2d62f908dcc63d693ce6434851761d3d155e4267 data/minecraft/advancement/recipes/misc/anticucho_from_smelting.json
 f950fbbd2a0cc48f33189749334f94c4df4c0fb0 data/minecraft/advancement/recipes/misc/anticucho_from_smoking.json
@@ -77,6 +77,8 @@ c78f0ca0a1f4e4bbc8ac71ecaff841a3654dd1f6 data/peruviansdelight/advancement/recip
 41cb1b9dcd808ca04e482b7d7d69e38ad27ec4c2 data/peruviansdelight/advancement/recipes/misc/pote_aji_amarillo.json
 6f271b13fe57fa968ffbca873f35a6d3e93fa052 data/peruviansdelight/advancement/recipes/misc/raw_anticucho.json
 bb0aa3c63b672439724e4c130eb2c42a9881dfca data/peruviansdelight/advancement/recipes/misc/semillas_aji_amarillo.json
+1b39ff88f65f0777965bb611d49fad033275847e data/peruviansdelight/advancement/recipes/misc/semillas_limon.json
+a0f25c1c248cdf846fe8ad8b812ec9b7f15aa167 data/peruviansdelight/advancement/recipes/misc/semilla_palta.json
 76e53767bee278cdb1efd04113971eb937b0482a data/peruviansdelight/advancement/recipes/misc/sillao.json
 44dcdc5293c8946e2a1872ec32af06b89a67b439 data/peruviansdelight/advancement/recipes/misc/soya_bag.json
 5444c9a2b6bf51dd22f152dfe494154354a0bdf6 data/peruviansdelight/advancement/recipes/misc/soya_crate.json
@@ -131,6 +133,8 @@ ba0a2ef241b617a3469e0ca11c25fc4b01d44f33 data/peruviansdelight/recipe/palto_pres
 01f72fb62eaa570e49a148e4d44a353e9fe474b7 data/peruviansdelight/recipe/pote_aji_amarillo.json
 3a5f02b0d998c6aebe1bab419886cc2729c02c82 data/peruviansdelight/recipe/raw_anticucho.json
 4204b67780301c6a75150935b8a9e53e630b0c79 data/peruviansdelight/recipe/semillas_aji_amarillo.json
+3c4a89e3cca0eab72c3db9cc4e8e23ccc324cab2 data/peruviansdelight/recipe/semillas_limon.json
+a2a1df7ad5e01c638d0ec34cc72caee59871e882 data/peruviansdelight/recipe/semilla_palta.json
 ce35dea6f6a064a8c7e00289b056d1c854d8d4d3 data/peruviansdelight/recipe/sillao.json
 60a897f94c0fd2916a40bdc8f8e64567e1b0493e data/peruviansdelight/recipe/soya_bag.json
 79bb747aba4211d30b4c219c2e0df13dfe3e2876 data/peruviansdelight/recipe/soya_crate.json

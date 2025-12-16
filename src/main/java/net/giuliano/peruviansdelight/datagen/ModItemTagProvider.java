@@ -6,6 +6,7 @@ import net.giuliano.peruviansdelight.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -21,24 +22,29 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.PALTO_LOG.get().asItem())
-                .add(ModBlocks.PALTO_WOOD.get().asItem())
-                .add(ModBlocks.STRIPPED_PALTO_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_PALTO_WOOD.get().asItem())
-                .add(ModBlocks.LIMONERO_LOG.get().asItem())
-                .add(ModBlocks.LIMONERO_WOOD.get().asItem())
-                .add(ModBlocks.STRIPPED_LIMONERO_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_LIMONERO_WOOD.get().asItem());
+        this.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
 
-        tag(ItemTags.PLANKS)
-                .add(ModBlocks.PALTO_PLANKS.get().asItem())
-                .add(ModBlocks.LIMONERO_PLANKS.get().asItem());
+        this.copy(BlockTags.PLANKS, ItemTags.PLANKS);
 
-        tag(Tags.Items.FOODS_RAW_FISH)
+        this.tag(Tags.Items.FOODS_RAW_FISH)
                 .add(ModItems.FILETE_ATUN.get());
 
-        tag(ItemTags.MEAT)  //Alimentar Lobos
+        this.tag(ItemTags.MEAT)  //Alimentar Lobos
                 .add(ModItems.CAMOTE_COCIDO.get());
+
+        this.copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
+        this.copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
+        this.copy(BlockTags.WOODEN_FENCES, ItemTags.WOODEN_FENCES);
+        this.copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
+        this.copy(BlockTags.FENCES, ItemTags.FENCES);
+        this.copy(BlockTags.WOODEN_DOORS, ItemTags.WOODEN_DOORS);
+        this.copy(BlockTags.WOODEN_TRAPDOORS, ItemTags.WOODEN_TRAPDOORS);
+        this.copy(BlockTags.WOODEN_PRESSURE_PLATES, ItemTags.WOODEN_PRESSURE_PLATES);
+        this.copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+        this.copy(BlockTags.LEAVES, ItemTags.LEAVES);
+
+        this.tag(ItemTags.SAPLINGS)
+                .add(ModBlocks.SEMILLAS_LIMON.get().asItem())
+                .add(ModBlocks.SEMILLA_PALTA.get().asItem());
     }
 }

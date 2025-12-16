@@ -1,5 +1,14 @@
-// 1.21.1	2025-08-20T01:32:53.3919072	Tags for minecraft:block mod id peruviansdelight
+// 1.21.1	2025-12-16T01:16:24.1695825	Tags for minecraft:block mod id peruviansdelight
 89992abc65d5c39bd6d5477cdbc8493263331718 data/minecraft/tags/block/fences.json
-940e12e54862156e797683a0a5902652effaa363 data/minecraft/tags/block/fence_gates.json
+d129b295c858a3a3a97d27925bb80a8f0516649b data/minecraft/tags/block/fence_gates.json
+345ec0ef8195b93ec08f72301a114a071c05d211 data/minecraft/tags/block/leaves.json
 bce536017f8879af07305b8afc28cca408d0056a data/minecraft/tags/block/logs_that_burn.json
+d7bc71bbaf213e9283f71a59ff22fedc80694f9e data/minecraft/tags/block/mineable/axe.json
 47cf4ff5d948fa1c9d8617a3928a2be45ce04f19 data/minecraft/tags/block/planks.json
+d3946afade0303a4af3f06610f831b178fc312e3 data/minecraft/tags/block/wooden_buttons.json
+c4ead6cbc57c97d4ddea06c337a49ca4ccd5df5c data/minecraft/tags/block/wooden_doors.json
+fa0e3694e09e0aad3084c944a1eb624bef4aaf17 data/minecraft/tags/block/wooden_fences.json
+597416b46b5f68ef60f06daf179c6c369c83da02 data/minecraft/tags/block/wooden_pressure_plates.json
+427ed923236818c14afb912357fac7d8ae4ef25c data/minecraft/tags/block/wooden_slabs.json
+b961eaf4fbf939a940366820ff9bab12e6de8bf0 data/minecraft/tags/block/wooden_stairs.json
+7795d7023c03bddb51f7f492c39d056d204d708a data/minecraft/tags/block/wooden_trapdoors.json

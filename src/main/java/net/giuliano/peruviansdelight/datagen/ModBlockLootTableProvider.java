@@ -88,7 +88,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIMONERO_PLANKS.get());
         dropSelf(ModBlocks.SEMILLAS_LIMON.get());
         add(ModBlocks.LIMONERO_LEAVES.get(), block ->
-                createModLeavesDrops(block, ModItems.LIMON.get(), 1.0F, 1.25F, 1.6667F, 2.0F));
+                createModLeavesDrops(block, ModItems.LIMON.get(), 0.5F, 0.5556F, 0.625F, 0.8333F));
         add(ModBlocks.LIMONERO_LEAVES_EMPTY.get(), this::createEmptyLeavesDrops);
 
         dropSelf(ModBlocks.PALTO_LOG.get());
@@ -191,6 +191,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     }
     protected LootTable.Builder createEmptyLeavesDrops(Block leavesBlock) {
         return LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F))
+                        .when(modHasShearsOrSilkTouch())
+                        .add(LootItem.lootTableItem(leavesBlock)))
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1.0F))
                         .when(modDoesNotHaveShearsOrSilkTouch())

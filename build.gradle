@@ -128,14 +128,15 @@ dependencies {
     compileOnly "curse.maven:farmers-delight-398521:6597295"
     "downloadableMods" "curse.maven:farmers-delight-398521:6597295"
 
+    // UTILIDADES
     compileOnly "mezz.jei:jei-1.21.1-neoforge-api:19.21.2.313"
     localRuntime "mezz.jei:jei-1.21.1-neoforge:19.21.2.313"
-
     localRuntime "curse.maven:jade-324717:6853386"
-
     localRuntime "curse.maven:appleskin-248787:6616291"
+    //localRuntime "curse.maven:harvest-with-ease-602171:5968872"
+    //localRuntime "curse.maven:cobweb-968456:7186943"
 
-    //COMPATIBILIDADES
+    // COMPATIBILIDADES
     //localRuntime "curse.maven:casualness-delight-909519:5853751"
     //localRuntime "curse.maven:cultural-delights-574622:6659969"
     //localRuntime "curse.maven:more-delight-forge-977515:6822138"
