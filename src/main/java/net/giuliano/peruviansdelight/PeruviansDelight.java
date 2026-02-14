@@ -8,6 +8,7 @@ import net.giuliano.peruviansdelight.event.ModEvents;
 import net.giuliano.peruviansdelight.item.ModCreativeModeTabs;
 import net.giuliano.peruviansdelight.item.ModItems;
 import net.giuliano.peruviansdelight.loot.ModLootModifiers;
+import net.giuliano.peruviansdelight.recipe.ModRecipes;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import org.slf4j.Logger;
 
@@ -52,6 +53,8 @@ public class PeruviansDelight {
         ModBlockEntities.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

@@ -1,18 +1,24 @@
 package net.giuliano.peruviansdelight.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.giuliano.peruviansdelight.block.entity.ModBlockEntities;
 import net.giuliano.peruviansdelight.block.entity.TendalBlockEntity;
+import net.giuliano.peruviansdelight.recipe.ModRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -37,6 +43,13 @@ public class TendalBlock extends BaseEntityBlock {
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        // Conectar el método tick de la entidad
+        return createTickerHelper(type, ModBlockEntities.TENDAL_BE.get(), TendalBlockEntity::tick);
     }
 
     @Override
@@ -82,25 +95,39 @@ public class TendalBlock extends BaseEntityBlock {
         if (level.isClientSide) return InteractionResult.SUCCESS;
 
         BlockEntity be = level.getBlockEntity(pos);
-        if (be instanceof TendalBlockEntity estera) {
+        if (be instanceof TendalBlockEntity tendal) {
             ItemStack heldItem = player.getMainHandItem();
 
-            // Shift + Mano vacía: Sacar el último ítem
-            if (player.isCrouching() && heldItem.isEmpty()) {
-                extractLastItem(estera, player);
+            if (heldItem.isEmpty()) {
+                extractLastItem(tendal, player);
                 return InteractionResult.CONSUME;
             }
 
-            // Poner ítem
-            if (!heldItem.isEmpty()) {
-                insertItem(estera, player, heldItem);
-                return InteractionResult.CONSUME;
-            }
+            insertItem(tendal, player, heldItem);
+            return InteractionResult.CONSUME;
         }
         return InteractionResult.PASS;
     }
 
     private void insertItem(TendalBlockEntity be, Player player, ItemStack stack) {
+        Level level = be.getLevel();
+        if (level == null) return;
+
+        // VERIFICACIÓN DE RECETA (FILTRO)
+        SingleRecipeInput recipeInput = new SingleRecipeInput(stack);
+
+        // Preguntamos al manager si existe alguna receta de tipo TENDAL para este ítem
+        boolean hasRecipe = level.getRecipeManager()
+                .getRecipeFor(ModRecipes.TENDAL_TYPE.get(), recipeInput, level)
+                .isPresent();
+
+        if (!hasRecipe) {
+            // Si no hay receta, no dejamos ponerlo
+            player.displayClientMessage(Component.translatable("message.peruviansdelight.cannot_dry"), true);
+            return;
+        }
+
+        // INSERCIÓN NORMAL (Si pasó el filtro)
         for (int i = 0; i < be.inventory.getSlots(); i++) {
             if (be.inventory.getStackInSlot(i).isEmpty()) {
                 be.inventory.insertItem(i, stack.copyWithCount(1), false);

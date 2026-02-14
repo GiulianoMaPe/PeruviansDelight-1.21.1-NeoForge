@@ -120,6 +120,7 @@
   "block.peruviansdelight.soya_bag": "Saco de granos de soya",
 
   "block.peruviansdelight.tendal": "Tendal",
+  "message.peruviansdelight.cannot_dry": "Esto no parece que se pueda secar...",
 
   "entity.mccourse.atun": "Atún",
   "entity.peruviansdelight.atun": "Atún"

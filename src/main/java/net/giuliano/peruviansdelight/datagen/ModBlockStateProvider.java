@@ -74,21 +74,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // BLOCKS SIMPLES
         var tendalModel = models().getBuilder("tendal")
                 .parent(models().getExistingFile(mcLoc("block/block")))
-                .texture("particle", modLoc("block/cara"))
-                .texture("top", modLoc("block/cara"))
-                .texture("side", modLoc("block/cara"))
-                .texture("bottom", modLoc("block/cara"))
-                //.texture("particle", modLoc("block/tendal_top")) // Textura al romper
-                //.texture("top", modLoc("block/tendal_top"))      // Textura de arriba
-                //.texture("side", modLoc("block/tendal_side"))    // Textura de los lados
-                //.texture("bottom", modLoc("block/tendal_side"))  // Textura de abajo
+                // Definimos las 6 texturas (4 lados + arriba + abajo)
+                .texture("particle", modLoc("block/tendal_top"))
+                .texture("top", modLoc("block/tendal_top"))
+                .texture("bottom", modLoc("block/mud_tiles"))
+                .texture("north", modLoc("block/tendal_nr"))
+                .texture("south", modLoc("block/tendal_sl"))
+                .texture("east", modLoc("block/tendal_nr"))
+                .texture("west", modLoc("block/tendal_sl"))
                 .element()
-                .from(0, 0, 0).to(16, 8, 16) // Caja de 16x8x16 píxeles
-                .allFaces((direction, faceBuilder) -> {
-                    if (direction == Direction.UP) faceBuilder.texture("#top").cullface(Direction.UP);
-                    else if (direction == Direction.DOWN) faceBuilder.texture("#bottom").cullface(Direction.DOWN);
-                    else faceBuilder.texture("#side").cullface(direction);
-                }).end();
+                    .from(0, 0, 0).to(16, 8, 16) // Tamaño del bloque
+                    // Asignamos manualmente cada textura a su cara correspondiente
+                    .face(Direction.UP).texture("#top").cullface(Direction.UP).end()
+                    .face(Direction.DOWN).texture("#bottom").cullface(Direction.DOWN).end()
+                    .face(Direction.NORTH).texture("#north").cullface(Direction.NORTH).end()
+                    .face(Direction.SOUTH).texture("#south").cullface(Direction.SOUTH).end()
+                    .face(Direction.EAST).texture("#east").cullface(Direction.EAST).end()
+                    .face(Direction.WEST).texture("#west").cullface(Direction.WEST).end()
+                    .end();
         horizontalBlock(ModBlocks.TENDAL.get(), tendalModel);
     }
 

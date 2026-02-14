@@ -1,11 +1,15 @@
 package net.giuliano.peruviansdelight.datagen;
 
+import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.block.ModBlocks;
 import net.giuliano.peruviansdelight.item.ModItems;
+import net.giuliano.peruviansdelight.recipe.TendalRecipe;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -207,6 +211,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         createFoodCookingRecipes(recipeOutput, ModItems.PAPAS_CORTADAS, ModItems.PAPAS_FRITAS, 0.35f);
         createFoodCookingRecipes(recipeOutput, ModItems.YUCA_CORTADA, ModItems.YUCA_FRITA, 0.35f);
         createFoodCookingRecipes(recipeOutput, ModItems.CHULETA_CORTADA, ModItems.CHICHARRON, 0.35f);
+        createFoodCookingRecipes(recipeOutput, ModItems.LLAMA, ModItems.LLAMA_ASADA, 0.35f);
+
+        // TENDAL
+        buildTendalRecipe(recipeOutput, ModItems.LLAMA, ModItems.CHARQUI, 20, "charqui_from_tendal"); //20 ticks = 1 segundo
 
         //MADERA
         stairBuilder(ModBlocks.LIMONERO_STAIRS.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
@@ -258,5 +266,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(input), RecipeCategory.MISC, output, experience, campfireTime)
                 .unlockedBy(getHasName(input), has(input))
                 .save(recipeOutput, getItemName(output) + "_from_campfire_cooking");
+    }
+
+    protected void buildTendalRecipe(RecipeOutput pWriter, ItemLike input, ItemLike output, int time, String name) {
+        TendalRecipe recipe = new TendalRecipe(
+                Ingredient.of(input), new ItemStack(output), time);
+        pWriter.accept(
+                ResourceLocation.fromNamespaceAndPath(PeruviansDelight.MOD_ID, name), recipe, null);
     }
 }

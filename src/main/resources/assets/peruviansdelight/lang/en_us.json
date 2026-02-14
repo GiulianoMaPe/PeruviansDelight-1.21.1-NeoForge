@@ -120,6 +120,7 @@
   "block.peruviansdelight.soya_bag": "Soybean Bag",
 
   "block.peruviansdelight.tendal": "Tendal",
+  "message.peruviansdelight.cannot_dry": "This doesn't seem to be drying...",
 
   "entity.mccourse.atun": "Tuna",
   "entity.peruviansdelight.atun": "Tuna"
