@@ -3,6 +3,7 @@ package net.giuliano.peruviansdelight.datagen;
 import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.block.ModBlocks;
 import net.giuliano.peruviansdelight.block.custom.*;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -69,6 +70,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         crateBlock(ModBlocks.YUCA_CRATE);
 
         bagBlock(ModBlocks.SOYA_BAG);
+
+        // BLOCKS SIMPLES
+        var tendalModel = models().getBuilder("tendal")
+                .parent(models().getExistingFile(mcLoc("block/block")))
+                .texture("particle", modLoc("block/cara"))
+                .texture("top", modLoc("block/cara"))
+                .texture("side", modLoc("block/cara"))
+                .texture("bottom", modLoc("block/cara"))
+                //.texture("particle", modLoc("block/tendal_top")) // Textura al romper
+                //.texture("top", modLoc("block/tendal_top"))      // Textura de arriba
+                //.texture("side", modLoc("block/tendal_side"))    // Textura de los lados
+                //.texture("bottom", modLoc("block/tendal_side"))  // Textura de abajo
+                .element()
+                .from(0, 0, 0).to(16, 8, 16) // Caja de 16x8x16 píxeles
+                .allFaces((direction, faceBuilder) -> {
+                    if (direction == Direction.UP) faceBuilder.texture("#top").cullface(Direction.UP);
+                    else if (direction == Direction.DOWN) faceBuilder.texture("#bottom").cullface(Direction.DOWN);
+                    else faceBuilder.texture("#side").cullface(direction);
+                }).end();
+        simpleBlock(ModBlocks.TENDAL.get(), tendalModel);
     }
 
     // MÉTODOS HELPER

@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -96,6 +97,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.SOYA_SILVESTRE);
         simpleBlockItemBlockTexture(ModBlocks.CAMOTE_SILVESTRE);
         simpleBlockItemBlockTexture(ModBlocks.YUCA_SILVESTRE);
+
+        getBuilder(ModBlocks.TENDAL.getId().getPath())
+                .parent(new ModelFile.UncheckedModelFile(modLoc("block/tendal")));
 
         basicItem(ModItems.ATUN_BUCKET.get());
         withExistingParent(ModItems.ATUN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

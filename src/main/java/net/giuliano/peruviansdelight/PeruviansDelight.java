@@ -1,6 +1,7 @@
 package net.giuliano.peruviansdelight;
 
 import net.giuliano.peruviansdelight.block.ModBlocks;
+import net.giuliano.peruviansdelight.block.entity.ModBlockEntities;
 import net.giuliano.peruviansdelight.entity.ModEntities;
 import net.giuliano.peruviansdelight.entity.client.AtunRenderer;
 import net.giuliano.peruviansdelight.event.ModEvents;
@@ -48,6 +49,7 @@ public class PeruviansDelight {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
 

@@ -143,6 +143,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.YUCA_CRATE.get());
 
         dropSelf(ModBlocks.SOYA_BAG.get());
+
+        dropSelf(ModBlocks.TENDAL.get());
     }
 
     protected LootTable.Builder createModFlowersDrops(Block flowerBlock, Item dropItem, float... chances) {

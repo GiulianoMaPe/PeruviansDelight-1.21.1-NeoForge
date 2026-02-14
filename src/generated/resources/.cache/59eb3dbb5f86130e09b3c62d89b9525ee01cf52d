@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-15T23:25:13.1103188	Loot Tables
+// 1.21.1	2026-02-14T12:59:58.3718217	Loot Tables
 0ba7d23981419dd414b9dc8fe9b396b6e730deaa data/peruviansdelight/loot_table/blocks/ajies_amarillos.json
 0961c06ce0ec43377c0895079598445074dd6446 data/peruviansdelight/loot_table/blocks/aji_amarillo_crate.json
 e65cf3dfce0c1897ce34e50e1c3fd6a567e377b2 data/peruviansdelight/loot_table/blocks/aji_amarillo_silvestre.json
@@ -46,6 +46,7 @@ daa0d1d2ca4c27099d643818d252a261e8450585 data/peruviansdelight/loot_table/blocks
 2f5ae6e6a8be7639c4a673b43fa9489820091e20 data/peruviansdelight/loot_table/blocks/stripped_limonero_wood.json
 d327241558298ac69eb8d424be78fbefc8457b39 data/peruviansdelight/loot_table/blocks/stripped_palto_log.json
 892c3c0ef6f964a2c4386de1a16fa349b84a2e8e data/peruviansdelight/loot_table/blocks/stripped_palto_wood.json
+3bb5974aeccdf7e58fcb5106d50d7bbaf5111d69 data/peruviansdelight/loot_table/blocks/tendal.json
 326374c92013590fa163602b9a6ee9bf9d8b6e20 data/peruviansdelight/loot_table/blocks/yucas.json
 9c7b0ad522f9ec114e6c6749c9b17eb3b65d69bf data/peruviansdelight/loot_table/blocks/yuca_crate.json
 bb6474863a2743f43de607c8ae0581b1a1829931 data/peruviansdelight/loot_table/blocks/yuca_silvestre.json

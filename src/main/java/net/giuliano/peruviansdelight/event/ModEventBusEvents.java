@@ -1,6 +1,8 @@
 package net.giuliano.peruviansdelight.event;
 
 import net.giuliano.peruviansdelight.PeruviansDelight;
+import net.giuliano.peruviansdelight.block.entity.ModBlockEntities;
+import net.giuliano.peruviansdelight.block.entity.client.TendalBlockRenderer;
 import net.giuliano.peruviansdelight.entity.ModEntities;
 import net.giuliano.peruviansdelight.entity.client.AtunModel;
 import net.giuliano.peruviansdelight.entity.custom.AtunEntity;
@@ -29,5 +31,10 @@ public class ModEventBusEvents {
     public static void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
         event.register(ModEntities.ATUN.get(), SpawnPlacementTypes.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 AbstractSchoolingFish::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.TENDAL_BE.get(), TendalBlockRenderer::new);
     }
 }

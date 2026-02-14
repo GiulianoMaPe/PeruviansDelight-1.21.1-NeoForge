@@ -242,6 +242,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SOYA_BAG = registerBlock("soya_bag",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
+    // BLOQUES
+    public static final DeferredBlock<Block> TENDAL = registerBlock("tendal",
+            () -> new TendalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
