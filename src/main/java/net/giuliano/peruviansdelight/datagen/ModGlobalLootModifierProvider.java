@@ -22,6 +22,7 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
+        // MOBS
         this.add("lana_from_llama_x_color",
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/llama")).build()
@@ -30,12 +31,18 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         this.add("pota_for_calamar",
                 new AddRandomCountItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/squid")).build()
-                }, ModItems.TENTACULO_POTA.get(), 6, 8));
+                }, ModItems.TENTACULO_POTA.get(), 6, 8, false));
         this.add("pota_for_glow_calamar",
                 new AddRandomCountItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/glow_squid")).build()
-                }, ModItems.TENTACULO_POTA.get(), 6, 8));
+                }, ModItems.TENTACULO_POTA.get(), 6, 8, false));
 
+        this.add("llama_meat_from_llama",
+                new AddRandomCountItemModifier(new LootItemCondition[] {
+                        new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/llama")).build()
+                }, ModItems.LLAMA.get(), 1, 3, true));
+
+        // COFRES
         this.add("inka_for_chest1",
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/pillager_outpost")).build(),

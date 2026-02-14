@@ -67,6 +67,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CHICHARRON.get());
         basicItem(ModItems.PAN_CHICHARRON.get());
 
+        basicItem(ModItems.LLAMA.get());
+        basicItem(ModItems.LLAMA_ASADA.get());
+        basicItem(ModItems.CHARQUI.get());
+
         basicItem(ModItems.POTE_AJI_AMARILLO.get());
         basicItem(ModItems.SILLAO.get());
         basicItem(ModItems.HUANCAINA.get());

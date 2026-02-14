@@ -68,7 +68,7 @@ public class ModFoodProperties {
             .saturationModifier(0.6f).build();
     public static final FoodProperties CAMOTE_COCIDO = new FoodProperties.Builder().nutrition(6).fast()
             .saturationModifier(0.8f).build();
-            //.saturationModifier(0.8f).meat().build(); Agregar Tag más adelante
+            //.saturationModifier(0.8f).meat().build(); Agregado el TAGs
     public static final FoodProperties CAMOTE_CORTADO = new FoodProperties.Builder().nutrition(1).fast()
                     .saturationModifier(0.5f).build();
     public static final FoodProperties CAMOTE_FRITO = new FoodProperties.Builder().nutrition(3).fast()
@@ -118,4 +118,11 @@ public class ModFoodProperties {
             .saturationModifier(1f).build();
     public static final FoodProperties PAN_CHICHARRON = new FoodProperties.Builder().nutrition(10)
             .saturationModifier(0.8f).build();
+
+    public static final FoodProperties LLAMA = new FoodProperties.Builder().nutrition(3)
+            .saturationModifier(0.3f).build();
+    public static final FoodProperties LLAMA_ASADA = new FoodProperties.Builder().nutrition(8)
+            .saturationModifier(0.8f).build();
+    public static final FoodProperties CHARQUI = new FoodProperties.Builder().nutrition(6)
+            .saturationModifier(0.8f).fast().build();
 }

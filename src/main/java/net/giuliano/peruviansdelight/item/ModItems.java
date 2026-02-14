@@ -146,6 +146,13 @@ public class ModItems {
     public static final DeferredItem<Item> PAN_CHICHARRON = ITEMS.registerItem("pan_chicharron",
             Item::new, new Item.Properties().food(ModFoodProperties.PAN_CHICHARRON));
 
+    public static final DeferredItem<Item> LLAMA = ITEMS.registerItem("llama",
+            Item::new, new Item.Properties().food(ModFoodProperties.LLAMA));
+    public static final DeferredItem<Item> LLAMA_ASADA = ITEMS.registerItem("llama_asada",
+            Item::new, new Item.Properties().food(ModFoodProperties.LLAMA_ASADA));
+    public static final DeferredItem<Item> CHARQUI = ITEMS.registerItem("charqui",
+            Item::new, new Item.Properties().food(ModFoodProperties.CHARQUI));
+
     //MOBS
     public static final DeferredItem<Item> ATUN_BUCKET = ITEMS.register("atun_bucket",
             () -> new MobBucketItem(ModEntities.ATUN.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH,
