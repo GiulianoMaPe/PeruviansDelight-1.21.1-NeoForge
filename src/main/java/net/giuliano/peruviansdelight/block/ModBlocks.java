@@ -243,8 +243,12 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
     // BLOQUES
+    public static final DeferredBlock<Block> MUD_TILES = registerBlock("mud_tiles",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> CHISELED_MUD_TILES = registerBlock("chiseled_mud_tiles",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> TENDAL = registerBlock("tendal",
-            () -> new TendalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+            () -> new TendalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS).noOcclusion()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

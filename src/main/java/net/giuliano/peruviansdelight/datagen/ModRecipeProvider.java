@@ -13,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
@@ -201,6 +202,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.PALTA)
                 .unlockedBy("has_palta", has(ModItems.PALTA))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MUD_TILES.get(), 4)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', Blocks.MUD_BRICKS)
+                .unlockedBy("has_mud_bricks", has(Blocks.MUD_BRICKS))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHISELED_MUD_TILES.get(), 2)
+                .pattern("S")
+                .pattern("S")
+                .define('S', ModBlocks.MUD_TILES)
+                .unlockedBy("has_mud_tiles", has(ModBlocks.MUD_TILES))
+                .save(recipeOutput);
+
+        // CORTADORA DE PIEDRA
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.MISC,
+                ModBlocks.MUD_TILES, Blocks.MUD_BRICKS);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.MISC,
+                ModBlocks.CHISELED_MUD_TILES, Blocks.MUD_BRICKS);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.MISC,
+                ModBlocks.CHISELED_MUD_TILES, ModBlocks.MUD_TILES);
 
         // COCCION DE INGREDIENTES
         createFoodCookingRecipes(recipeOutput, ModItems.RAW_ANTICUCHO, ModItems.ANTICUCHO, 0.35f);

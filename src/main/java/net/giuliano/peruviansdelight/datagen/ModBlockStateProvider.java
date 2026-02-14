@@ -72,9 +72,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         bagBlock(ModBlocks.SOYA_BAG);
 
         // BLOCKS SIMPLES
+        blockWithItem(ModBlocks.MUD_TILES);
+
+        var chiseledMudModel = models().cubeBottomTop("chiseled_mud_tiles",
+                modLoc("block/chiseled_mud_tiles"),
+                modLoc("block/chiseled_mud_tiles_bottom"),
+                modLoc("block/chiseled_mud_tiles_top"));
+        simpleBlockWithItem(ModBlocks.CHISELED_MUD_TILES.get(), chiseledMudModel);
+
         var tendalModel = models().getBuilder("tendal")
                 .parent(models().getExistingFile(mcLoc("block/block")))
-                // Definimos las 6 texturas (4 lados + arriba + abajo)
                 .texture("particle", modLoc("block/tendal_top"))
                 .texture("top", modLoc("block/tendal_top"))
                 .texture("bottom", modLoc("block/mud_tiles"))
@@ -84,7 +91,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .texture("west", modLoc("block/tendal_sl"))
                 .element()
                     .from(0, 0, 0).to(16, 8, 16) // Tamaño del bloque
-                    // Asignamos manualmente cada textura a su cara correspondiente
                     .face(Direction.UP).texture("#top").cullface(Direction.UP).end()
                     .face(Direction.DOWN).texture("#bottom").cullface(Direction.DOWN).end()
                     .face(Direction.NORTH).texture("#north").cullface(Direction.NORTH).end()

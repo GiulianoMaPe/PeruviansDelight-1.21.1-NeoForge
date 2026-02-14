@@ -144,6 +144,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.SOYA_BAG.get());
 
+        dropSelf(ModBlocks.MUD_TILES.get());
+        dropSelf(ModBlocks.CHISELED_MUD_TILES.get());
         dropSelf(ModBlocks.TENDAL.get());
     }
 
