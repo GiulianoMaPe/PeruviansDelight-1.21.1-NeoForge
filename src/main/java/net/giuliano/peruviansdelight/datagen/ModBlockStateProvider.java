@@ -89,7 +89,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     else if (direction == Direction.DOWN) faceBuilder.texture("#bottom").cullface(Direction.DOWN);
                     else faceBuilder.texture("#side").cullface(direction);
                 }).end();
-        simpleBlock(ModBlocks.TENDAL.get(), tendalModel);
+        horizontalBlock(ModBlocks.TENDAL.get(), tendalModel);
     }
 
     // MÉTODOS HELPER

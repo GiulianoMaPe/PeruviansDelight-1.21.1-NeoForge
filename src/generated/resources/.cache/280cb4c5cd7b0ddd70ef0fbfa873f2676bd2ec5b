@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-14T12:59:58.3748289	Block States: peruviansdelight
+// 1.21.1	2026-02-14T14:24:47.6388095	Block States: peruviansdelight
 1a637b4c9c23fb0158a486bd2819083fbc226033 assets/peruviansdelight/blockstates/ajies_amarillos.json
 deece3377a404f63a3308e061adbdeeafb7cbe55 assets/peruviansdelight/blockstates/aji_amarillo_crate.json
 fa6ac5e638a4b8ed755e4f21e14c90501363cab5 assets/peruviansdelight/blockstates/aji_amarillo_silvestre.json
@@ -46,7 +46,7 @@ f2b77e8308263b5d9a241622c744a300b8830533 assets/peruviansdelight/blockstates/soy
 a95824acf2b51f2e99bc6515d68a84bca2b267f3 assets/peruviansdelight/blockstates/stripped_limonero_wood.json
 f153bf452d138ef382b2a0aa8cee96693cf55739 assets/peruviansdelight/blockstates/stripped_palto_log.json
 81bc7de1b1fb06aa95b407018858fb248d605a85 assets/peruviansdelight/blockstates/stripped_palto_wood.json
-6502ccac6b07a514e5016d72c15a3a9a7ca4c436 assets/peruviansdelight/blockstates/tendal.json
+22f866c128280a734fd81863e814d8b63a4369a4 assets/peruviansdelight/blockstates/tendal.json
 6c6f07273fd2731f939f77024d9430b8c17a165f assets/peruviansdelight/blockstates/yucas.json
 09a79ccb1935aeabe2003c8e3fc5ed6101408825 assets/peruviansdelight/blockstates/yuca_crate.json
 4531c4d35f4ff67c9b38babdf656b13405612499 assets/peruviansdelight/blockstates/yuca_silvestre.json
