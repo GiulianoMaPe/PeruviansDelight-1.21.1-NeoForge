@@ -27,6 +27,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/llama")).build()
                 }, Items.WHITE_WOOL));
+        this.add("lana_from_trader_llama_x_color",
+                new AddItemModifier(new LootItemCondition[] {
+                        new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/trader_llama")).build()
+                }, Items.WHITE_WOOL));
 
         this.add("pota_for_calamar",
                 new AddRandomCountItemModifier(new LootItemCondition[] {
@@ -40,6 +44,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         this.add("llama_meat_from_llama",
                 new AddRandomCountItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/llama")).build()
+                }, ModItems.LLAMA.get(), 1, 3, true));
+        this.add("llama_meat_from_trader_llama",
+                new AddRandomCountItemModifier(new LootItemCondition[] {
+                        new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/trader_llama")).build()
                 }, ModItems.LLAMA.get(), 1, 3, true));
 
         // COFRES
