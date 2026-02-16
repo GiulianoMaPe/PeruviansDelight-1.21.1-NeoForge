@@ -70,8 +70,8 @@ public class TendalBlockEntity extends BlockEntity {
         // Condiciones ambientales
         boolean esDeDia = level.isDay();
         boolean sinSombra = level.canSeeSky(pos.above());
-        if (!esDeDia || !sinSombra) return;
-        if (level.isRainingAt(pos.above())) return;
+        boolean estaLloviendo = level.isRainingAt(pos.above());
+        if (!esDeDia || !sinSombra || estaLloviendo) return;
 
         for (int i = 0; i < entity.inventory.getSlots(); i++) {
             ItemStack stack = entity.inventory.getStackInSlot(i);
