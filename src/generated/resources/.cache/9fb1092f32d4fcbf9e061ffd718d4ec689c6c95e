@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-14T17:18:46.43244	Recipes
+// 1.21.1	2026-02-16T18:53:18.8503079	Recipes
 aa232cd5fc675342b4fa8422a61ab5c2fe73e79f data/minecraft/advancement/recipes/misc/anticucho_from_campfire_cooking.json
 2d62f908dcc63d693ce6434851761d3d155e4267 data/minecraft/advancement/recipes/misc/anticucho_from_smelting.json
 f950fbbd2a0cc48f33189749334f94c4df4c0fb0 data/minecraft/advancement/recipes/misc/anticucho_from_smoking.json
@@ -115,7 +115,7 @@ d329a53c9be74a708977bf9b9811b213d13683be data/peruviansdelight/advancement/recip
 b98cde59e8b745f9c59a44981755b4d8196d1b86 data/peruviansdelight/recipe/aji_amarillo_crate.json
 37f2d9b920c33b80ca1fc7dbc7dcc48d4572200f data/peruviansdelight/recipe/camote.json
 41b83f87a98210b12ca941b621b2bc661c610fbf data/peruviansdelight/recipe/camote_crate.json
-5fc3b9cefc43f04670ad7730f7d90ea1e32ae3a1 data/peruviansdelight/recipe/charqui_from_tendal.json
+cb74682e6acf1205620833bf38feeafec9b3051b data/peruviansdelight/recipe/charqui_from_tendal.json
 fc2e4fce66dc438c7c6aedfd5d7f6bfd04a0a16f data/peruviansdelight/recipe/chiseled_mud_tiles.json
 0ac942a545a1da36ca9b6a03856b48ed2c2cbc2c data/peruviansdelight/recipe/granos_soya.json
 2079f7a708cbffdc476ea5055fcdbbab846dc63e data/peruviansdelight/recipe/huancaina.json
