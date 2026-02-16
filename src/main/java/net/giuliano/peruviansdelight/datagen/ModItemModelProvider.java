@@ -98,8 +98,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.CAMOTE_SILVESTRE);
         simpleBlockItemBlockTexture(ModBlocks.YUCA_SILVESTRE);
 
-        getBuilder(ModBlocks.TENDAL.getId().getPath())
-                .parent(new ModelFile.UncheckedModelFile(modLoc("block/tendal")));
+        withExistingParent(ModBlocks.TENDAL.getId().getPath(), modLoc("block/tendal"));
 
         basicItem(ModItems.ATUN_BUCKET.get());
         withExistingParent(ModItems.ATUN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

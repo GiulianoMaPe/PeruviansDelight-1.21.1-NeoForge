@@ -80,24 +80,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/chiseled_mud_tiles_top"));
         simpleBlockWithItem(ModBlocks.CHISELED_MUD_TILES.get(), chiseledMudModel);
 
-        var tendalModel = models().getBuilder("tendal")
-                .parent(models().getExistingFile(mcLoc("block/block")))
-                .texture("particle", modLoc("block/tendal_top"))
-                .texture("top", modLoc("block/tendal_top"))
-                .texture("bottom", modLoc("block/mud_tiles"))
-                .texture("north", modLoc("block/tendal_nr"))
-                .texture("south", modLoc("block/tendal_sl"))
-                .texture("east", modLoc("block/tendal_nr"))
-                .texture("west", modLoc("block/tendal_sl"))
-                .element()
-                    .from(0, 0, 0).to(16, 8, 16) // Tamaño del bloque
-                    .face(Direction.UP).texture("#top").cullface(Direction.UP).end()
-                    .face(Direction.DOWN).texture("#bottom").cullface(Direction.DOWN).end()
-                    .face(Direction.NORTH).texture("#north").cullface(Direction.NORTH).end()
-                    .face(Direction.SOUTH).texture("#south").cullface(Direction.SOUTH).end()
-                    .face(Direction.EAST).texture("#east").cullface(Direction.EAST).end()
-                    .face(Direction.WEST).texture("#west").cullface(Direction.WEST).end()
-                    .end();
+        var tendalModel = models().getExistingFile(modLoc("block/tendal"));
         horizontalBlock(ModBlocks.TENDAL.get(), tendalModel);
     }
 

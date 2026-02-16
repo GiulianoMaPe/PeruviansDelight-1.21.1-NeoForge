@@ -47,7 +47,7 @@ public class TendalBlockRenderer implements BlockEntityRenderer<TendalBlockEntit
                 poseStack.pushPose();
 
                 // Centrar en el bloque
-                poseStack.translate(0.5f, 0.51f, 0.5f);
+                poseStack.translate(0.5f, 0.57f, 0.5f);
 
                 // Rotar según la dirección del bloque
                 poseStack.mulPose(Axis.YP.rotationDegrees(-facing.toYRot()));

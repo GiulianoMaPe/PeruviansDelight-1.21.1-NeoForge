@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-14T16:51:43.6391692	Block States: peruviansdelight
+// 1.21.1	2026-02-16T13:17:46.4456977	Block States: peruviansdelight
 1a637b4c9c23fb0158a486bd2819083fbc226033 assets/peruviansdelight/blockstates/ajies_amarillos.json
 deece3377a404f63a3308e061adbdeeafb7cbe55 assets/peruviansdelight/blockstates/aji_amarillo_crate.json
 fa6ac5e638a4b8ed755e4f21e14c90501363cab5 assets/peruviansdelight/blockstates/aji_amarillo_silvestre.json
@@ -168,7 +168,6 @@ addf8df67f005b5c5e41130f9081435960f8df3c assets/peruviansdelight/models/block/st
 0547521bd360f462b7ec7770967301d9d4645f2a assets/peruviansdelight/models/block/stripped_palto_log_horizontal.json
 8d7d5c579c0cfd55200c01e0ae018f067ab38115 assets/peruviansdelight/models/block/stripped_palto_wood.json
 bf15a3e594d24386c04d63a7a77b3da1c110c330 assets/peruviansdelight/models/block/stripped_palto_wood_horizontal.json
-e399181bd712563e33db462a798543fc8131feb7 assets/peruviansdelight/models/block/tendal.json
 adb0bdf02132535298d5e86e96052ec443ce7c9b assets/peruviansdelight/models/block/yucas_stage0.json
 ff5f1cd115c73fb00d8f0adc9a47911132fe556d assets/peruviansdelight/models/block/yucas_stage1.json
 552425f08279eee9dc63cfcdc33c9daf933a920a assets/peruviansdelight/models/block/yucas_stage2.json
