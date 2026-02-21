@@ -3,8 +3,6 @@ package net.giuliano.peruviansdelight.compat.jei;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
-import mezz.jei.api.gui.drawable.IDrawableAnimated;
-import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -26,15 +24,13 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
 
     private final IDrawable background;
     private final IDrawable icon;
-    private final IDrawableAnimated arrow;
+
+    private final int altura = 146;
+    private final int ancho = 60;
 
     public TendalRecipeCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 108, 48);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, altura, ancho);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.TENDAL.get()));
-
-        // Flecha estática recortada de la parte inferior de la imagen (ajustado a tu diseño anterior)
-        IDrawableStatic staticArrow = helper.createDrawable(TEXTURE, 0, 48, 18, 12);
-        this.arrow = helper.createAnimatedDrawable(staticArrow, 200, IDrawableAnimated.StartDirection.LEFT, false);
     }
 
     @Override
@@ -59,21 +55,15 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, TendalRecipe recipe, IFocusGroup focuses) {
-        // En 1.21.1 el "input" de la receta podría llamarse diferente dependiendo de tu implementación de TendalRecipe.
-        // Asumo que tu TendalRecipe en 1.21 tiene un campo 'input' tipo Ingredient o similar.
+        builder.addSlot(RecipeIngredientRole.INPUT, 21, 24)
+                .addIngredients(recipe.input);
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 18, 16)
-                .addIngredients(recipe.input); // Verifica que 'input' sea público en tu TendalRecipe 1.21
-
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 74, 16)
-                .addItemStack(recipe.output); // Verifica que 'output' sea público (ItemStack)
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 119, 24)
+                .addItemStack(recipe.output);
     }
 
     @Override
     public void draw(TendalRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
-        // Dibujar flecha animada (Coordenadas de tu diseño)
-        arrow.draw(guiGraphics, 45, 20);
-
         // Dibujar tiempo
         int processingTime = recipe.time;
         int seconds = processingTime / 20;
@@ -83,9 +73,8 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
         Font font = minecraft.font;
         int stringWidth = font.width(timeString);
 
-        // Posición esquina inferior derecha
-        int xPos = (108 - stringWidth - 1);
-        int yPos = 40;
+        int xPos = (altura - stringWidth - 2);
+        int yPos = ancho - 12;
 
         guiGraphics.drawString(font, timeString, xPos, yPos, 0x8B8B8B, false);
     }
