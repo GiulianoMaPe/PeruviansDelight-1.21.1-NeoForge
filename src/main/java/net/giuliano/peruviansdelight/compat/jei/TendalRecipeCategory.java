@@ -74,7 +74,7 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
         int stringWidth = font.width(timeString);
 
         int xPos = (altura - stringWidth - 2);
-        int yPos = ancho - 12;
+        int yPos = ancho - 10;
 
         guiGraphics.drawString(font, timeString, xPos, yPos, 0x8B8B8B, false);
     }

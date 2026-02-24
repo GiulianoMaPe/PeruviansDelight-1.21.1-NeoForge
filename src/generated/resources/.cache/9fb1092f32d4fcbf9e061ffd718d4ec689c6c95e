@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-16T18:53:18.8503079	Recipes
+// 1.21.1	2026-02-23T19:33:48.552032	Recipes
 aa232cd5fc675342b4fa8422a61ab5c2fe73e79f data/minecraft/advancement/recipes/misc/anticucho_from_campfire_cooking.json
 2d62f908dcc63d693ce6434851761d3d155e4267 data/minecraft/advancement/recipes/misc/anticucho_from_smelting.json
 f950fbbd2a0cc48f33189749334f94c4df4c0fb0 data/minecraft/advancement/recipes/misc/anticucho_from_smoking.json
@@ -115,7 +115,6 @@ d329a53c9be74a708977bf9b9811b213d13683be data/peruviansdelight/advancement/recip
 b98cde59e8b745f9c59a44981755b4d8196d1b86 data/peruviansdelight/recipe/aji_amarillo_crate.json
 37f2d9b920c33b80ca1fc7dbc7dcc48d4572200f data/peruviansdelight/recipe/camote.json
 41b83f87a98210b12ca941b621b2bc661c610fbf data/peruviansdelight/recipe/camote_crate.json
-cb74682e6acf1205620833bf38feeafec9b3051b data/peruviansdelight/recipe/charqui_from_tendal.json
 fc2e4fce66dc438c7c6aedfd5d7f6bfd04a0a16f data/peruviansdelight/recipe/chiseled_mud_tiles.json
 0ac942a545a1da36ca9b6a03856b48ed2c2cbc2c data/peruviansdelight/recipe/granos_soya.json
 2079f7a708cbffdc476ea5055fcdbbab846dc63e data/peruviansdelight/recipe/huancaina.json
@@ -133,8 +132,10 @@ e83a70d822ffd7a5fbb44f6a0a54b0c718c30197 data/peruviansdelight/recipe/limonero_s
 0ae9b779b3e288926c6cac1d5a7315d34fa5794b data/peruviansdelight/recipe/limonero_trapdoor.json
 9735062779f865958789d4d92b26ae034a77d423 data/peruviansdelight/recipe/limonero_wood.json
 d2713ba7b66aed03d7d1b7b2988b7a9ca2d5b0e5 data/peruviansdelight/recipe/limon_crate.json
+cb74682e6acf1205620833bf38feeafec9b3051b data/peruviansdelight/recipe/llama_to_charqui_from_tendal.json
 444dff94fb5349873ee5ff53c93209845bf77a81 data/peruviansdelight/recipe/mostrito.json
 58a3bbfd8b898e5b7ebc5b6ebc740132762176b5 data/peruviansdelight/recipe/mud_tiles.json
+84198ed25ff80d3bd80e8e7d2be496997264fef1 data/peruviansdelight/recipe/mutton_charqui_from_tendal.json
 cbc0683320c6364be8fcebad055ee44fef719879 data/peruviansdelight/recipe/palta.json
 0c600ba9b77a415c8415ba1dca72b612e2ef66b2 data/peruviansdelight/recipe/palta_crate.json
 ca1170656753f3df6364a702eb5083e835403e5c data/peruviansdelight/recipe/palto_button.json
