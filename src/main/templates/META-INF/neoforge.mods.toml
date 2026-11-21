@@ -88,8 +88,8 @@ description='''${mod_description}'''
 
 [[dependencies.${mod_id}]]
     modId="farmersdelight"
-    type="${farmersdelight_dependency_type}"
-    versionRange="[1.2.4,)"
+    type="required"
+    versionRange="*"
     ordering="NONE"
     side="BOTH"
 

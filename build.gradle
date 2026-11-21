@@ -121,12 +121,10 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 // "optional", meaning it will not be pulled by dependents of this mod.
 configurations {
     runtimeClasspath.extendsFrom localRuntime
-    downloadableMods
 }
 
 dependencies {
-    compileOnly "curse.maven:farmers-delight-398521:6597295"
-    "downloadableMods" "curse.maven:farmers-delight-398521:6597295"
+    implementation "curse.maven:farmers-delight-398521:6597295"
 
     // UTILIDADES
     compileOnly "mezz.jei:jei-1.21.1-neoforge-api:19.21.2.313"
@@ -167,17 +165,6 @@ dependencies {
 // This block of code expands all declared replace properties in the specified resource targets.
 // A missing property will result in an error. Properties are expanded using ${} Groovy notation.
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
-
-    def farmersDelightDependencyType = 'required'
-    // Si la tarea que se está ejecutando contiene 'runData'...
-    if (project.gradle.startParameter.taskNames.any { it.contains('runData') }) {
-        // ... la cambiamos a opcional.
-        farmersDelightDependencyType = 'optional'
-        println ">>> Detected runData task, setting Farmer's Delight dependency to 'optional'."
-    }
-
-    inputs.property("farmersDelightDepType", farmersDelightDependencyType)
-
     var replaceProperties = [
             minecraft_version      : minecraft_version,
             minecraft_version_range: minecraft_version_range,
@@ -188,8 +175,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-            mod_description        : mod_description,
-            farmersdelight_dependency_type: farmersDelightDependencyType
+            mod_description        : mod_description
     ]
     inputs.properties replaceProperties
     expand replaceProperties
@@ -226,26 +212,4 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
-}
-
-task copyMods(type: Copy) {
-    from configurations.downloadableMods
-    into 'run/mods'
-}
-
-// Hacemos que runClient y runServer dependan de esta tarea de copiado
-// Esto asegura que los mods se copien ANTES de que el juego intente iniciarse
-tasks.named('runClient').configure {
-    dependsOn copyMods
-}
-tasks.named('runServer').configure {
-    dependsOn copyMods
-}
-
-task deleteMods(type: Delete) {
-    delete 'run/mods'
-}
-
-tasks.named('runData').configure {
-    dependsOn deleteMods
 }

@@ -25,11 +25,11 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
     private final IDrawable background;
     private final IDrawable icon;
 
-    private final int altura = 146;
-    private final int ancho = 60;
+    private final int altura = 60;
+    private final int ancho = 146;
 
     public TendalRecipeCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, altura, ancho);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, ancho, altura);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.TENDAL.get()));
     }
 
@@ -44,8 +44,13 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
     }
 
     @Override
-    public IDrawable getBackground() {
-        return this.background;
+    public int getHeight() {
+        return this.altura;
+    }
+
+    @Override
+    public int getWidth() {
+        return this.ancho;
     }
 
     @Override
@@ -64,6 +69,7 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
 
     @Override
     public void draw(TendalRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        this.background.draw(guiGraphics);
         // Dibujar tiempo
         int processingTime = recipe.time;
         int seconds = processingTime / 20;
@@ -73,8 +79,8 @@ public class TendalRecipeCategory implements IRecipeCategory<TendalRecipe> {
         Font font = minecraft.font;
         int stringWidth = font.width(timeString);
 
-        int xPos = (altura - stringWidth - 2);
-        int yPos = ancho - 10;
+        int xPos = (ancho - stringWidth - 2);
+        int yPos = altura - 10;
 
         guiGraphics.drawString(font, timeString, xPos, yPos, 0x8B8B8B, false);
     }
