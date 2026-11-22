@@ -91,6 +91,8 @@ public class ModFoodProperties {
             .saturationModifier(0.7f).build();
     public static final FoodProperties PAPAS_CORTADAS = new FoodProperties.Builder().nutrition(1).fast()
             .saturationModifier(0.5f).build();
+    public static final FoodProperties PAPA_SECA = new FoodProperties.Builder().nutrition(1)
+            .saturationModifier(0.3f).build();
     public static final FoodProperties PAPAS_FRITAS = new FoodProperties.Builder().nutrition(3).fast()
             .saturationModifier(0.8f).build();
     public static final FoodProperties TENTACULO_POTA = new FoodProperties.Builder().nutrition(1).fast()

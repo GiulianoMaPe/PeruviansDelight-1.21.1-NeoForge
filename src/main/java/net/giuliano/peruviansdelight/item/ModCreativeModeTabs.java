@@ -61,6 +61,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PALTA.get());
                         output.accept(ModItems.PALTA_CORTADA.get());
                         output.accept(ModItems.PAPAS_CORTADAS.get());
+                        output.accept(ModItems.PAPA_SECA.get());
                         output.accept(ModItems.PAPAS_FRITAS.get());
                         output.accept(ModItems.TENTACULO_POTA.get());
                         output.accept(ModItems.POTA_CORTADO.get());

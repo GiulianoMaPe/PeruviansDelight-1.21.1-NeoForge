@@ -52,6 +52,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.PALTA.get());
         basicItem(ModItems.PALTA_CORTADA.get());
         basicItem(ModItems.PAPAS_CORTADAS.get());
+        basicItem(ModItems.PAPA_SECA.get());
         basicItem(ModItems.PAPAS_FRITAS.get());
         basicItem(ModItems.TENTACULO_POTA.get());
         basicItem(ModItems.POTA_CORTADO.get());
