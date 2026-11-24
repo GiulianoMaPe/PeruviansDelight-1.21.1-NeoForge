@@ -158,7 +158,7 @@ public class ModBlocks {
                     .strength(2f).sound(SoundType.WOOD)));
     public static final DeferredBlock<PressurePlateBlock> LIMONERO_PRESSURE_PLATE = registerBlock("limonero_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
-                    .strength(2f)));
+                    .strength(2f).noCollission()));
     public static final DeferredBlock<ButtonBlock> LIMONERO_BUTTON = registerBlock("limonero_button",
             () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.of()
                     .strength(2f).noCollission()));
@@ -183,7 +183,7 @@ public class ModBlocks {
                     .strength(2f).sound(SoundType.WOOD)));
     public static final DeferredBlock<PressurePlateBlock> PALTO_PRESSURE_PLATE = registerBlock("palto_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
-                    .strength(2f)));
+                    .strength(2f).noCollission()));
     public static final DeferredBlock<ButtonBlock> PALTO_BUTTON = registerBlock("palto_button",
             () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.of()
                     .strength(2f).noCollission()));

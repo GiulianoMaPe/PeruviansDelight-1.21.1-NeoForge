@@ -1,8 +1,17 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "moredelight"
+      }
+    }
+  ],
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "minecraft:potato"
+      "tag": "c:crops/potato"
     }
   ],
   "result": [
@@ -13,7 +22,13 @@
       }
     }
   ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+  "tool": [
+    {
+      "type": "farmersdelight:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
 }

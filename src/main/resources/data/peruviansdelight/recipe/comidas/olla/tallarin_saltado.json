@@ -10,10 +10,10 @@
       "tag": "c:foods/pasta"
     },
     {
-      "item": "peruviansdelight:sillao"
+      "tag": "peruviansdelight:ingredients/soy_sauce"
     },
     {
-      "item": "peruviansdelight:aji_amarillo"
+      "tag": "peruviansdelight:ingredients/aji_amarillo"
     },
     {
       "tag": "c:foods/raw_chicken"

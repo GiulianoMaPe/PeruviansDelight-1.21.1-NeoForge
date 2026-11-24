@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "peruviansdelight:limonero_log"
+            "items": "#peruviansdelight:limonero_logs"
           }
         ]
       },

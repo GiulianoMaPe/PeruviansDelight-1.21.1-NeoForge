@@ -2,20 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    [
-      {
-        "item": "peruviansdelight:limonero_log"
-      },
-      {
-        "item": "peruviansdelight:limonero_wood"
-      },
-      {
-        "item": "peruviansdelight:stripped_limonero_log"
-      },
-      {
-        "item": "peruviansdelight:stripped_limonero_wood"
-      }
-    ]
+    {
+      "tag": "peruviansdelight:limonero_logs"
+    }
   ],
   "result": {
     "count": 4,

@@ -6,24 +6,19 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "minecraft:baked_potato"
+      "tag": "peruviansdelight:ingredients/baked_potato"
     },
-    [
-      {
-        "item": "peruviansdelight:aji_amarillo"
-      },
-      {
-        "item": "peruviansdelight:pote_aji_amarillo"
-      }
-    ],
+    {
+      "tag": "peruviansdelight:ingredients/aji_amarillo_or_jar"
+    },
     {
       "tag": "c:eggs"
     },
     {
-      "tag": "culturaldelights:avocados"
+      "tag": "peruviansdelight:ingredients/avocado"
     },
     {
-      "item": "peruviansdelight:filete_atun_cocido"
+      "tag": "peruviansdelight:ingredients/cooked_tuna"
     }
   ],
   "result": {

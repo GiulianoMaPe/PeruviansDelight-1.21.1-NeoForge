@@ -13,7 +13,7 @@
       "tag": "c:foods/cooked_egg"
     },
     {
-      "item": "peruviansdelight:sillao"
+      "tag": "peruviansdelight:ingredients/soy_sauce"
     },
     {
       "tag": "c:foods/raw_chicken"
@@ -22,7 +22,7 @@
       "tag": "c:crops/onion"
     },
     {
-      "item": "peruviansdelight:kion"
+      "tag": "peruviansdelight:ingredients/ginger"
     }
   ],
   "recipe_book_tab": "meals",

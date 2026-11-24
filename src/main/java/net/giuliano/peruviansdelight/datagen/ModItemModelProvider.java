@@ -31,6 +31,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.AEROPUERTO.get());
         basicItem(ModItems.MOSTRITO.get());
         basicItem(ModItems.PAPA_HUANCAINA.get());
+        basicItem(ModItems.AJI_GALLINA.get());
 
         basicItem(ModItems.TOCOSH.get());
 

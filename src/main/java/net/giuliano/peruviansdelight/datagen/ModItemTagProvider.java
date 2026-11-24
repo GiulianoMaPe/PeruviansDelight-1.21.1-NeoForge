@@ -27,10 +27,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
         this.copy(BlockTags.PLANKS, ItemTags.PLANKS);
 
         this.tag(Tags.Items.FOODS_RAW_FISH)
-                .add(ModItems.FILETE_ATUN.get());
+                .add(ModItems.FILETE_ATUN.get(), ModItems.ATUN.get());
 
         this.tag(ItemTags.MEAT)  //Alimentar Lobos
-                .add(ModItems.CAMOTE_COCIDO.get());
+                .add(ModItems.CAMOTE_COCIDO.get(), ModItems.LLAMA.get(), ModItems.LLAMA_ASADA.get(),
+                        ModItems.BEEF_HEART.get(), ModItems.RAW_HEART_SLICES.get(),
+                        ModItems.CHULETA_CORTADA.get(), ModItems.CHICHARRON.get());
 
         this.copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
         this.copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);

@@ -4,7 +4,7 @@
   "cookingtime": 600,
   "experience": 0.35,
   "ingredient": {
-    "item": "peruviansdelight:papas_cortadas"
+    "tag": "peruviansdelight:ingredients/cut_potatoes"
   },
   "result": {
     "count": 1,

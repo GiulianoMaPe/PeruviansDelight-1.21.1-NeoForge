@@ -56,6 +56,9 @@ public class ModItems {
     public static final DeferredItem<Item> PAPA_HUANCAINA = ITEMS.registerItem("papa_huancaina",
             ModBowlFood::new, new Item.Properties().stacksTo(16)
                     .food(ModFoodProperties.PAPA_HUANCAINA));
+    public static final DeferredItem<Item> AJI_GALLINA = ITEMS.registerItem("aji_gallina",
+            ModBowlFood::new, new Item.Properties().stacksTo(16)
+                    .food(ModFoodProperties.AJI_GALLINA));
 
     public static final DeferredItem<Item> TOCOSH = ITEMS.registerItem("tocosh",
             ModDrinkItems::new, new Item.Properties().stacksTo(16)

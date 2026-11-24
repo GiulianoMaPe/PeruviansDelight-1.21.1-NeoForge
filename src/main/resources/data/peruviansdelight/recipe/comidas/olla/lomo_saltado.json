@@ -10,13 +10,13 @@
       "tag": "c:foods/raw_beef"
     },
     {
-      "item": "peruviansdelight:sillao"
+      "tag": "peruviansdelight:ingredients/soy_sauce"
     },
     {
-      "item": "peruviansdelight:aji_amarillo"
+      "tag": "peruviansdelight:ingredients/aji_amarillo"
     },
     {
-      "item": "peruviansdelight:papas_fritas"
+      "tag": "peruviansdelight:ingredients/french_fries"
     },
     {
       "tag": "c:crops/onion"

@@ -9,16 +9,16 @@
       "item": "peruviansdelight:camote_frito"
     },
     {
-      "item": "peruviansdelight:aji_amarillo"
+      "tag": "peruviansdelight:ingredients/aji_amarillo"
     },
     {
-      "tag": "c:foods/raw_fish"
+      "tag": "c:foods/safe_raw_fish"
     },
     {
       "tag": "c:crops/onion"
     },
     {
-      "item": "peruviansdelight:gajo_limon"
+      "tag": "peruviansdelight:ingredients/lemon_wedges"
     },
     {
       "item": "minecraft:bowl"

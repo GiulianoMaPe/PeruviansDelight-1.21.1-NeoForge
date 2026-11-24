@@ -41,6 +41,8 @@ public class ModFoodProperties {
             .saturationModifier(0.75f).build();
     public static final FoodProperties PAPA_HUANCAINA = new FoodProperties.Builder().nutrition(10)
             .saturationModifier(0.8f).build();
+    public static final FoodProperties AJI_GALLINA = new FoodProperties.Builder().nutrition(10)
+            .saturationModifier(0.8f).build();
 
     public static final FoodProperties TOCOSH = new FoodProperties.Builder().nutrition(8).fast()
             .saturationModifier(0.5f)

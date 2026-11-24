@@ -5,19 +5,22 @@
     {
       "item": "minecraft:bowl"
     },
-    [
-      {
-        "item": "peruviansdelight:aji_amarillo"
-      },
-      {
-        "item": "peruviansdelight:pote_aji_amarillo"
-      }
-    ],
+    {
+      "tag": "peruviansdelight:ingredients/aji_amarillo_or_jar"
+    },
     {
       "tag": "c:foods/bread"
     },
     {
-      "tag": "c:buckets/milk"
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "tag": "c:buckets/milk"
+        },
+        {
+          "tag": "peruviansdelight:ingredients/milk_bottles"
+        }
+      ]
     }
   ],
   "result": {

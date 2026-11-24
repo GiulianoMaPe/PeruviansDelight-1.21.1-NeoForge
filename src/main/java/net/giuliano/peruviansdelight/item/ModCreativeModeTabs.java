@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AEROPUERTO.get());
                         output.accept(ModItems.MOSTRITO.get());
                         output.accept(ModItems.PAPA_HUANCAINA.get());
+                        output.accept(ModItems.AJI_GALLINA.get());
 
                         output.accept(ModItems.TOCOSH.get());
 

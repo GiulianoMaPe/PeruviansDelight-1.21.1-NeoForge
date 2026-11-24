@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:baked_potato"
+      "tag": "peruviansdelight:ingredients/baked_potato"
     },
     {
       "item": "peruviansdelight:huancaina"

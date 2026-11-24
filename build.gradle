@@ -124,7 +124,8 @@ configurations {
 }
 
 dependencies {
-    implementation "curse.maven:farmers-delight-398521:6597295"
+    implementation "curse.maven:farmers-delight-398521:8765184"
+    implementation "curse.maven:brewin-and-chewin-637808:8309583"
 
     // UTILIDADES
     compileOnly "mezz.jei:jei-1.21.1-neoforge-api:19.21.2.313"

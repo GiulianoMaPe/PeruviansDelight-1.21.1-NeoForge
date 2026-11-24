@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "peruviansdelight:papas_cortadas"
+            "items": "#peruviansdelight:ingredients/cut_potatoes"
           }
         ]
       },

@@ -4,7 +4,7 @@
   "group": "palto",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "tag": "c:rods/wooden"
     },
     "W": {
       "item": "peruviansdelight:palto_planks"

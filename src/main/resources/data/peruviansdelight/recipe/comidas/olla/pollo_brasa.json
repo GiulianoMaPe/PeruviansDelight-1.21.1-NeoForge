@@ -7,13 +7,13 @@
   "experience": 1.0,
   "ingredients": [
     {
-      "item": "minecraft:chicken"
+      "tag": "c:foods/raw_chicken"
     },
     {
-      "item": "peruviansdelight:papas_fritas"
+      "tag": "peruviansdelight:ingredients/french_fries"
     },
     {
-      "item": "peruviansdelight:papas_fritas"
+      "tag": "peruviansdelight:ingredients/french_fries"
     },
     {
       "tag": "c:foods/leafy_green"

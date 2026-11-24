@@ -4,6 +4,9 @@ import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.block.ModBlocks;
 import net.giuliano.peruviansdelight.item.ModItems;
 import net.giuliano.peruviansdelight.recipe.TendalRecipe;
+import net.giuliano.peruviansdelight.util.ModTags;
+import net.minecraft.advancements.Criterion;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -16,6 +19,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -53,12 +57,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.LIMONERO_PLANKS.get(), 4)
-                .requires(anyOf(ModBlocks.LIMONERO_LOG, ModBlocks.LIMONERO_WOOD, ModBlocks.STRIPPED_LIMONERO_LOG, ModBlocks.STRIPPED_LIMONERO_WOOD))
-                .unlockedBy("has_limonero_log", has(ModBlocks.LIMONERO_LOG))
+                .requires(ModTags.Items.LIMONERO_LOGS)
+                .unlockedBy("has_limonero_log", has(ModTags.Items.LIMONERO_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PALTO_PLANKS.get(), 4)
-                .requires(anyOf(ModBlocks.PALTO_LOG, ModBlocks.PALTO_WOOD, ModBlocks.STRIPPED_PALTO_LOG, ModBlocks.STRIPPED_PALTO_WOOD))
-                .unlockedBy("has_limonero_log", has(ModBlocks.PALTO_LOG))
+                .requires(ModTags.Items.PALTO_LOGS)
+                .unlockedBy("has_palto_log", has(ModTags.Items.PALTO_LOGS))
                 .save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STRING, 4)
@@ -169,9 +173,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HUANCAINA.get(), 2)
                 .requires(Items.BOWL)
-                .requires(anyOf(ModItems.AJI_AMARILLO, ModItems.POTE_AJI_AMARILLO))
+                .requires(ModTags.Items.AJI_AMARILLO_OR_JAR)
                 .requires(Tags.Items.FOODS_BREAD)
-                .requires(Tags.Items.BUCKETS_MILK)
+                .requires(CompoundIngredient.of(
+                        Ingredient.of(Tags.Items.BUCKETS_MILK), Ingredient.of(ModTags.Items.MILK_BOTTLES)))
                 .unlockedBy("has_aji_amarillo", has(ModItems.AJI_AMARILLO))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POTE_AJI_AMARILLO.get(), 2)
@@ -182,7 +187,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ANTICUCHO.get())
                 .requires(ModItems.RAW_HEART_SLICES)
-                .requires(Items.STICK)
+                .requires(Tags.Items.RODS_WOODEN)
                 .unlockedBy("has_raw_heart_slices", has(ModItems.RAW_HEART_SLICES))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SEMILLAS_AJI_AMARILLO.get())
@@ -230,15 +235,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         createFoodCookingRecipes(recipeOutput, ModItems.CAMOTE_CORTADO, ModItems.CAMOTE_FRITO, 0.35f);
         createFoodCookingRecipes(recipeOutput, ModItems.POTA_CORTADO, ModItems.CHICHARRON_POTA, 0.35f);
         createFoodCookingRecipes(recipeOutput, ModItems.FILETE_ATUN, ModItems.FILETE_ATUN_COCIDO, 0.35f);
-        createFoodCookingRecipes(recipeOutput, ModItems.PAPAS_CORTADAS, ModItems.PAPAS_FRITAS, 0.35f);
+        createFoodCookingRecipes(recipeOutput, Ingredient.of(ModTags.Items.CUT_POTATOES),
+                "has_papas_cortadas", has(ModTags.Items.CUT_POTATOES), ModItems.PAPAS_FRITAS, 0.35f);
         createFoodCookingRecipes(recipeOutput, ModItems.YUCA_CORTADA, ModItems.YUCA_FRITA, 0.35f);
         createFoodCookingRecipes(recipeOutput, ModItems.CHULETA_CORTADA, ModItems.CHICHARRON, 0.35f);
         createFoodCookingRecipes(recipeOutput, ModItems.LLAMA, ModItems.LLAMA_ASADA, 0.35f);
 
         // TENDAL
-        buildTendalRecipe(recipeOutput, ModItems.LLAMA, ModItems.CHARQUI, 9600, "llama_to_charqui_from_tendal"); // 8 min //20 ticks = 1 segundo
-        buildTendalRecipe(recipeOutput, Items.MUTTON, ModItems.CHARQUI, 9600, "mutton_charqui_from_tendal");
-        buildTendalRecipe(recipeOutput, Items.POTATO, ModItems.PAPA_SECA, 9600, "papa_seca_from_tendal"); // 8 min
+        buildTendalRecipe(recipeOutput, Ingredient.of(ModItems.LLAMA), ModItems.CHARQUI, 9600, "llama_to_charqui_from_tendal"); // 8 min
+        buildTendalRecipe(recipeOutput, Ingredient.of(ModTags.Items.RAW_MUTTON), ModItems.CHARQUI, 9600, "mutton_charqui_from_tendal");
+        buildTendalRecipe(recipeOutput, Ingredient.of(ModTags.Items.CUT_POTATOES), ModItems.PAPA_SECA, 9600, "papa_seca_from_tendal");
 
         //MADERA
         stairBuilder(ModBlocks.LIMONERO_STAIRS.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
@@ -247,10 +253,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         buttonBuilder(ModBlocks.LIMONERO_BUTTON.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
                 .unlockedBy("has_limonero_planks", has(ModBlocks.LIMONERO_PLANKS)).save(recipeOutput);
         pressurePlate(recipeOutput, ModBlocks.LIMONERO_PRESSURE_PLATE.get(), ModBlocks.LIMONERO_PLANKS.get());
-        fenceBuilder(ModBlocks.LIMONERO_FENCE.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
-                .unlockedBy("has_limonero_planks", has(ModBlocks.LIMONERO_PLANKS)).save(recipeOutput);
-        fenceGateBuilder(ModBlocks.LIMONERO_FENCE_GATE.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
-                .unlockedBy("has_limonero_planks", has(ModBlocks.LIMONERO_PLANKS)).save(recipeOutput);
+        buildWoodenFenceRecipes(recipeOutput, ModBlocks.LIMONERO_PLANKS, ModBlocks.LIMONERO_FENCE,
+                ModBlocks.LIMONERO_FENCE_GATE, "limonero");
         doorBuilder(ModBlocks.LIMONERO_DOOR.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
                 .unlockedBy("has_limonero_planks", has(ModBlocks.LIMONERO_PLANKS)).save(recipeOutput);
         trapdoorBuilder(ModBlocks.LIMONERO_TRAPDOOR.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
@@ -262,39 +266,57 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         buttonBuilder(ModBlocks.PALTO_BUTTON.get(), Ingredient.of(ModBlocks.PALTO_PLANKS)).group("palto")
                 .unlockedBy("has_palto_planks", has(ModBlocks.PALTO_PLANKS)).save(recipeOutput);
         pressurePlate(recipeOutput, ModBlocks.PALTO_PRESSURE_PLATE.get(), ModBlocks.PALTO_PLANKS.get());
-        fenceBuilder(ModBlocks.PALTO_FENCE.get(), Ingredient.of(ModBlocks.PALTO_PLANKS)).group("palto")
-                .unlockedBy("has_palto_planks", has(ModBlocks.PALTO_PLANKS)).save(recipeOutput);
-        fenceGateBuilder(ModBlocks.PALTO_FENCE_GATE.get(), Ingredient.of(ModBlocks.PALTO_PLANKS)).group("palto")
-                .unlockedBy("has_palto_planks", has(ModBlocks.PALTO_PLANKS)).save(recipeOutput);
+        buildWoodenFenceRecipes(recipeOutput, ModBlocks.PALTO_PLANKS, ModBlocks.PALTO_FENCE, ModBlocks.PALTO_FENCE_GATE, "palto");
         doorBuilder(ModBlocks.PALTO_DOOR.get(), Ingredient.of(ModBlocks.PALTO_PLANKS)).group("palto")
                 .unlockedBy("has_palto_planks", has(ModBlocks.PALTO_PLANKS)).save(recipeOutput);
         trapdoorBuilder(ModBlocks.PALTO_TRAPDOOR.get(), Ingredient.of(ModBlocks.PALTO_PLANKS)).group("palto")
                 .unlockedBy("has_palto_planks", has(ModBlocks.PALTO_PLANKS)).save(recipeOutput);
     }
 
-    private static Ingredient anyOf(ItemLike... items) {
-        return Ingredient.of(items);
+    private static void buildWoodenFenceRecipes(RecipeOutput recipeOutput, ItemLike planks,
+                                                 ItemLike fence, ItemLike fenceGate, String group) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, fence, 3)
+                .define('W', planks)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("W#W")
+                .pattern("W#W")
+                .group(group)
+                .unlockedBy(getHasName(planks), has(planks))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, fenceGate)
+                .define('W', planks)
+                .define('#', Tags.Items.RODS_WOODEN)
+                .pattern("#W#")
+                .pattern("#W#")
+                .group(group)
+                .unlockedBy(getHasName(planks), has(planks))
+                .save(recipeOutput);
     }
 
     protected static void createFoodCookingRecipes(RecipeOutput recipeOutput, ItemLike input, ItemLike output, float experience) {
+        createFoodCookingRecipes(recipeOutput, Ingredient.of(input), getHasName(input), has(input), output, experience);
+    }
+
+    private static void createFoodCookingRecipes(RecipeOutput recipeOutput, Ingredient input, String unlockName,
+                                                  Criterion<InventoryChangeTrigger.TriggerInstance> unlockCriterion,
+                                                  ItemLike output, float experience) {
         int smeltingTime = 200;
         int smokingTime = 100;
         int campfireTime = 600;
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(input), RecipeCategory.MISC, output, experience, smeltingTime)
-                .unlockedBy(getHasName(input), has(input))
+        SimpleCookingRecipeBuilder.smelting(input, RecipeCategory.MISC, output, experience, smeltingTime)
+                .unlockedBy(unlockName, unlockCriterion)
                 .save(recipeOutput, getItemName(output) + "_from_smelting");
-        SimpleCookingRecipeBuilder.smoking(Ingredient.of(input), RecipeCategory.MISC, output, experience, smokingTime)
-                .unlockedBy(getHasName(input), has(input))
+        SimpleCookingRecipeBuilder.smoking(input, RecipeCategory.MISC, output, experience, smokingTime)
+                .unlockedBy(unlockName, unlockCriterion)
                 .save(recipeOutput, getItemName(output) + "_from_smoking");
-        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(input), RecipeCategory.MISC, output, experience, campfireTime)
-                .unlockedBy(getHasName(input), has(input))
+        SimpleCookingRecipeBuilder.campfireCooking(input, RecipeCategory.MISC, output, experience, campfireTime)
+                .unlockedBy(unlockName, unlockCriterion)
                 .save(recipeOutput, getItemName(output) + "_from_campfire_cooking");
     }
 
-    protected void buildTendalRecipe(RecipeOutput pWriter, ItemLike input, ItemLike output, int time, String name) {
-        TendalRecipe recipe = new TendalRecipe(
-                Ingredient.of(input), new ItemStack(output), time);
+    protected void buildTendalRecipe(RecipeOutput pWriter, Ingredient input, ItemLike output, int time, String name) {
+        TendalRecipe recipe = new TendalRecipe(input, new ItemStack(output), time);
         pWriter.accept(
                 ResourceLocation.fromNamespaceAndPath(PeruviansDelight.MOD_ID, name), recipe, null);
     }

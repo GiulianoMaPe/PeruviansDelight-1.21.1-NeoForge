@@ -88,7 +88,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.WOODEN_STAIRS).add(ModBlocks.LIMONERO_STAIRS.get(), ModBlocks.PALTO_STAIRS.get());
         this.tag(BlockTags.WOODEN_SLABS).add(ModBlocks.LIMONERO_SLAB.get(), ModBlocks.PALTO_SLAB.get());
         this.tag(BlockTags.WOODEN_FENCES).add(ModBlocks.LIMONERO_FENCE.get(), ModBlocks.PALTO_FENCE.get());
-        this.tag(BlockTags.FENCE_GATES).add(ModBlocks.LIMONERO_FENCE_GATE.get(), ModBlocks.PALTO_FENCE_GATE.get());
         this.tag(BlockTags.WOODEN_DOORS).add(ModBlocks.LIMONERO_DOOR.get(), ModBlocks.PALTO_DOOR.get());
         this.tag(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.LIMONERO_TRAPDOOR.get(), ModBlocks.PALTO_TRAPDOOR.get());
         this.tag(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.LIMONERO_PRESSURE_PLATE.get(), ModBlocks.PALTO_PRESSURE_PLATE.get());

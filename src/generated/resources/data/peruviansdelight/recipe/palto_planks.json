@@ -2,20 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    [
-      {
-        "item": "peruviansdelight:palto_log"
-      },
-      {
-        "item": "peruviansdelight:palto_wood"
-      },
-      {
-        "item": "peruviansdelight:stripped_palto_log"
-      },
-      {
-        "item": "peruviansdelight:stripped_palto_wood"
-      }
-    ]
+    {
+      "tag": "peruviansdelight:palto_logs"
+    }
   ],
   "result": {
     "count": 4,

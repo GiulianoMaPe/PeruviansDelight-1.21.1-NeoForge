@@ -21,6 +21,12 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> KNIVES = forgeCreate("tools/knife");
+        public static final TagKey<Item> RAW_MUTTON = forgeCreate("foods/raw_mutton");
+        public static final TagKey<Item> AJI_AMARILLO_OR_JAR = createTag("ingredients/aji_amarillo_or_jar");
+        public static final TagKey<Item> MILK_BOTTLES = createTag("ingredients/milk_bottles");
+        public static final TagKey<Item> CUT_POTATOES = createTag("ingredients/cut_potatoes");
+        public static final TagKey<Item> LIMONERO_LOGS = createTag("limonero_logs");
+        public static final TagKey<Item> PALTO_LOGS = createTag("palto_logs");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(PeruviansDelight.MOD_ID, name));
