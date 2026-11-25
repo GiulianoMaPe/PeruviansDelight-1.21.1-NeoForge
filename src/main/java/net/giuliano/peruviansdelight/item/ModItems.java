@@ -66,6 +66,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> AJI_AMARILLO = ITEMS.registerItem("aji_amarillo",
             Item::new, new Item.Properties().food(ModFoodProperties.AJI_AMARILLO));
+    public static final DeferredItem<Item> AJI_PANCA = ITEMS.registerItem("aji_panca",
+            Item::new, new Item.Properties().food(ModFoodProperties.AJI_PANCA));
+    public static final DeferredItem<Item> AJI_PANCA_SECO = ITEMS.registerItem("aji_panca_seco",
+            Item::new, new Item.Properties().food(ModFoodProperties.AJI_PANCA_SECO));
     public static final DeferredItem<Item> LIMON = ITEMS.registerItem("limon",
             Item::new, new Item.Properties().food(ModFoodProperties.LIMON));
     public static final DeferredItem<Item> GAJO_LIMON = ITEMS.registerItem("gajo_limon",
@@ -110,6 +114,10 @@ public class ModItems {
             Item::new, new Item.Properties().food(ModFoodProperties.QUESO_FRESCO_WEDGE));
     public static final DeferredItem<Item> PAPAS_FRITAS = ITEMS.registerItem("papas_fritas",
             Item::new, new Item.Properties().food(ModFoodProperties.PAPAS_FRITAS));
+    public static final DeferredItem<Item> HABAS = ITEMS.registerItem("habas",
+            Item::new, new Item.Properties().food(ModFoodProperties.HABAS));
+    public static final DeferredItem<Item> VAINA_HABAS = ITEMS.registerItem("vaina_habas",
+            Item::new, new Item.Properties());
     public static final DeferredItem<Item> TENTACULO_POTA = ITEMS.registerItem("tentaculo_pota",
             Item::new, new Item.Properties().stacksTo(16).food(ModFoodProperties.TENTACULO_POTA));
     public static final DeferredItem<Item> POTA_CORTADO = ITEMS.registerItem("pota_cortado",
@@ -118,6 +126,8 @@ public class ModItems {
             Item::new, new Item.Properties().food(ModFoodProperties.CHICHARRON_POTA));
 
     public static final DeferredItem<Item> POTE_AJI_AMARILLO = ITEMS.registerItem("pote_aji_amarillo",
+            Item::new, new Item.Properties().stacksTo(16));
+    public static final DeferredItem<Item> POTE_AJI_PANCA = ITEMS.registerItem("pote_aji_panca",
             Item::new, new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> SILLAO = ITEMS.registerItem("sillao",
             Item::new, new Item.Properties().stacksTo(16));
@@ -131,6 +141,8 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.SOYA_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> SEMILLAS_AJI_AMARILLO = ITEMS.register("semillas_aji_amarillo",
             () -> new ItemNameBlockItem(ModBlocks.AJI_AMARILLO_CROP.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SEMILLAS_AJI_PANCA = ITEMS.registerItem("semillas_aji_panca",
+            Item::new, new Item.Properties());
 
     public static final DeferredItem<Item> BEEF_HEART = ITEMS.registerItem("beef_heart",
             Item::new, new Item.Properties().food(ModFoodProperties.BEEF_HEART));

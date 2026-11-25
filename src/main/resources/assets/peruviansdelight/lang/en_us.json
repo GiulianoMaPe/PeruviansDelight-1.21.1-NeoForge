@@ -18,6 +18,8 @@
   "item.peruviansdelight.tocosh": "Tocosh",
 
   "item.peruviansdelight.aji_amarillo": "Ají Amarillo",
+  "item.peruviansdelight.aji_panca": "Ají Panca",
+  "item.peruviansdelight.aji_panca_seco": "Dried Ají Panca",
   "item.peruviansdelight.limon": "Lemon",
   "item.peruviansdelight.gajo_limon": "Lemon Wedge",
   "item.peruviansdelight.kion": "Ginger",
@@ -36,6 +38,8 @@
   "item.peruviansdelight.palta_cortada": "Avocado Slice",
   "item.peruviansdelight.papas_cortadas": "Potato Slices",
   "item.peruviansdelight.papa_seca": "Dried Potato",
+  "item.peruviansdelight.habas": "Broad Beans",
+  "item.peruviansdelight.vaina_habas": "Broad Bean Pod",
   "block.peruviansdelight.queso_fresco_wheel": "Fresh Cheese Wheel",
   "item.peruviansdelight.queso_fresco_wedge": "Fresh Cheese Wedge",
   "item.peruviansdelight.papas_fritas": "French Fries",
@@ -59,6 +63,7 @@
   "item.peruviansdelight.charqui": "Charqui",
 
   "item.peruviansdelight.pote_aji_amarillo": "Ají Amarillo Jar",
+  "item.peruviansdelight.pote_aji_panca": "Ají Panca Jar",
   "item.peruviansdelight.sillao": "Soy Sauce",
   "item.peruviansdelight.huancaina": "Huancaína",
 
@@ -67,6 +72,7 @@
   "item.peruviansdelight.vaina_soya": "Soybean Pod",
   "item.peruviansdelight.granos_soya": "Soybeans",
   "item.peruviansdelight.semillas_aji_amarillo": "Aji Amarillo Seeds",
+  "item.peruviansdelight.semillas_aji_panca": "Ají Panca Seeds",
 
   "item.peruviansdelight.atun_spawn_egg": "Tuna Spawn Egg",
 

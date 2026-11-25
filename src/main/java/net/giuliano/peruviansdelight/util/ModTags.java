@@ -23,6 +23,8 @@ public class ModTags {
         public static final TagKey<Item> KNIVES = forgeCreate("tools/knife");
         public static final TagKey<Item> RAW_MUTTON = forgeCreate("foods/raw_mutton");
         public static final TagKey<Item> AJI_AMARILLO_OR_JAR = createTag("ingredients/aji_amarillo_or_jar");
+        public static final TagKey<Item> AJI_PANCA = createTag("ingredients/aji_panca");
+        public static final TagKey<Item> AJI_PANCA_OR_JAR = createTag("ingredients/aji_panca_or_jar");
         public static final TagKey<Item> MILK_BOTTLES = createTag("ingredients/milk_bottles");
         public static final TagKey<Item> CUT_POTATOES = createTag("ingredients/cut_potatoes");
         public static final TagKey<Item> LIMONERO_LOGS = createTag("limonero_logs");

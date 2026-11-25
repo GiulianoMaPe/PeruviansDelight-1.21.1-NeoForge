@@ -54,6 +54,12 @@ public class ModFoodProperties {
     public static final FoodProperties AJI_AMARILLO = new FoodProperties.Builder().nutrition(2).fast()
             .saturationModifier(0.1f)
             .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1f).build();
+    public static final FoodProperties AJI_PANCA = new FoodProperties.Builder().nutrition(2).fast()
+            .saturationModifier(0.1f)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1f).build();
+    public static final FoodProperties AJI_PANCA_SECO = new FoodProperties.Builder().nutrition(2).fast()
+            .saturationModifier(0.1f)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 1f).build();
     public static final FoodProperties LIMON = new FoodProperties.Builder().nutrition(2).fast()
             .saturationModifier(0.5f)
             .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 200, 3), 1f)
@@ -95,6 +101,8 @@ public class ModFoodProperties {
             .saturationModifier(0.5f).build();
     public static final FoodProperties PAPA_SECA = new FoodProperties.Builder().nutrition(1)
             .saturationModifier(0.3f).build();
+    public static final FoodProperties HABAS = new FoodProperties.Builder().nutrition(2)
+            .saturationModifier(1.0f).build();
     public static final FoodProperties QUESO_FRESCO_WEDGE = new FoodProperties.Builder().nutrition(4)
             .saturationModifier(1.0f).build();
     public static final FoodProperties PAPAS_FRITAS = new FoodProperties.Builder().nutrition(3).fast()

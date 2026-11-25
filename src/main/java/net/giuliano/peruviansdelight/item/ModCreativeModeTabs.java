@@ -45,6 +45,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SOYA_BAG.get());
 
                         output.accept(ModItems.AJI_AMARILLO.get());
+                        output.accept(ModItems.AJI_PANCA.get());
+                        output.accept(ModItems.AJI_PANCA_SECO.get());
                         output.accept(ModItems.LIMON.get());
                         output.accept(ModItems.GAJO_LIMON.get());
                         output.accept(ModItems.KION.get());
@@ -86,6 +88,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHARQUI.get());
 
                         output.accept(ModItems.POTE_AJI_AMARILLO.get());
+                        output.accept(ModItems.POTE_AJI_PANCA.get());
                         output.accept(ModItems.SILLAO.get());
                         output.accept(ModItems.HUANCAINA.get());
 
@@ -93,7 +96,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.VAINA_SOYA.get());
                         output.accept(ModItems.GRANOS_SOYA.get());
+                        output.accept(ModItems.VAINA_HABAS.get());
+                        output.accept(ModItems.HABAS.get());
                         output.accept(ModItems.SEMILLAS_AJI_AMARILLO.get());
+                        output.accept(ModItems.SEMILLAS_AJI_PANCA.get());
 
                         output.accept(ModItems.ATUN_SPAWN_EGG.get());
 

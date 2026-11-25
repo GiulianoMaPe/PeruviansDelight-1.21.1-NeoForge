@@ -18,6 +18,8 @@
   "item.peruviansdelight.tocosh": "Tocosh",
 
   "item.peruviansdelight.aji_amarillo": "Ají amarillo",
+  "item.peruviansdelight.aji_panca": "Ají panca",
+  "item.peruviansdelight.aji_panca_seco": "Ají panca seco",
   "item.peruviansdelight.limon": "Limón",
   "item.peruviansdelight.gajo_limon": "Gajo de limón",
   "item.peruviansdelight.kion": "Kion",
@@ -36,6 +38,8 @@
   "item.peruviansdelight.palta_cortada": "Palta cortada",
   "item.peruviansdelight.papas_cortadas": "Papas cortadas",
   "item.peruviansdelight.papa_seca": "Papa seca",
+  "item.peruviansdelight.habas": "Habas",
+  "item.peruviansdelight.vaina_habas": "Vaina de habas",
   "block.peruviansdelight.queso_fresco_wheel": "Rueda de queso fresco",
   "item.peruviansdelight.queso_fresco_wedge": "Cuña de queso fresco",
   "item.peruviansdelight.papas_fritas": "Papas fritas",
@@ -59,6 +63,7 @@
   "item.peruviansdelight.charqui": "Charqui",
 
   "item.peruviansdelight.pote_aji_amarillo": "Pote de ají amarillo",
+  "item.peruviansdelight.pote_aji_panca": "Pote de ají panca",
   "item.peruviansdelight.sillao": "Sillao",
   "item.peruviansdelight.huancaina": "Huancaína",
 
@@ -67,6 +72,7 @@
   "item.peruviansdelight.vaina_soya": "Vaina de soya",
   "item.peruviansdelight.granos_soya": "Granos de soya",
   "item.peruviansdelight.semillas_aji_amarillo": "Semillas de ají amarillo",
+  "item.peruviansdelight.semillas_aji_panca": "Semillas de ají panca",
 
   "item.peruviansdelight.atun_spawn_egg": "Generar atún",
 

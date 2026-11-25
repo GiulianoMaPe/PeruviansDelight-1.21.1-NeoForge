@@ -171,6 +171,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.VAINA_SOYA)
                 .unlockedBy("has_vaina_soya", has(ModItems.VAINA_SOYA))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HABAS.get(), 2)
+                .requires(ModItems.VAINA_HABAS)
+                .unlockedBy("has_vaina_habas", has(ModItems.VAINA_HABAS))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(PeruviansDelight.MOD_ID, "habas_from_vaina_habas"));
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HUANCAINA.get(), 2)
                 .requires(Items.BOWL)
                 .requires(ModTags.Items.AJI_AMARILLO_OR_JAR)
@@ -185,6 +189,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.AJI_AMARILLO.get())
                 .unlockedBy("has_aji_amarillo", has(ModItems.AJI_AMARILLO))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POTE_AJI_PANCA.get(), 2)
+                .pattern("#S#")
+                .define('#', Items.GLASS_BOTTLE)
+                .define('S', ModItems.AJI_PANCA_SECO.get())
+                .unlockedBy("has_aji_panca_seco", has(ModItems.AJI_PANCA_SECO))
+                .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ANTICUCHO.get())
                 .requires(ModItems.RAW_HEART_SLICES)
                 .requires(Tags.Items.RODS_WOODEN)
@@ -193,6 +203,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SEMILLAS_AJI_AMARILLO.get())
                 .requires(ModItems.AJI_AMARILLO)
                 .unlockedBy("has_aji_amarillo", has(ModItems.AJI_AMARILLO))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SEMILLAS_AJI_PANCA.get())
+                .requires(ModItems.AJI_PANCA)
+                .unlockedBy("has_aji_panca", has(ModItems.AJI_PANCA))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SILLAO.get())
                 .requires(ModItems.GRANOS_SOYA)
@@ -245,6 +259,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         buildTendalRecipe(recipeOutput, Ingredient.of(ModItems.LLAMA), ModItems.CHARQUI, 9600, "llama_to_charqui_from_tendal"); // 8 min
         buildTendalRecipe(recipeOutput, Ingredient.of(ModTags.Items.RAW_MUTTON), ModItems.CHARQUI, 9600, "mutton_charqui_from_tendal");
         buildTendalRecipe(recipeOutput, Ingredient.of(ModTags.Items.CUT_POTATOES), ModItems.PAPA_SECA, 9600, "papa_seca_from_tendal");
+        buildTendalRecipe(recipeOutput, Ingredient.of(ModItems.AJI_PANCA), ModItems.AJI_PANCA_SECO, 9600, "aji_panca_seco_from_tendal");
 
         //MADERA
         stairBuilder(ModBlocks.LIMONERO_STAIRS.get(), Ingredient.of(ModBlocks.LIMONERO_PLANKS)).group("limonero")
