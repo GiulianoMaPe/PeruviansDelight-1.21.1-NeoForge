@@ -4,7 +4,11 @@ import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.block.ModBlocks;
 import net.giuliano.peruviansdelight.item.ModItems;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -28,6 +32,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         this.tag(Tags.Items.FOODS_RAW_FISH)
                 .add(ModItems.FILETE_ATUN.get(), ModItems.ATUN.get());
+
+        this.tag(TagKey.create(Registries.ITEM,
+                        ResourceLocation.fromNamespaceAndPath("brewinandchewin", "cheese_wheels/ripe")))
+                .add(ModBlocks.QUESO_FRESCO_WHEEL.get().asItem());
+        this.tag(TagKey.create(Registries.ITEM,
+                        ResourceLocation.fromNamespaceAndPath("brewinandchewin", "foods/cheese_wedge")))
+                .add(ModItems.QUESO_FRESCO_WEDGE.get());
 
         this.tag(ItemTags.MEAT)  //Alimentar Lobos
                 .add(ModItems.CAMOTE_COCIDO.get(), ModItems.LLAMA.get(), ModItems.LLAMA_ASADA.get(),

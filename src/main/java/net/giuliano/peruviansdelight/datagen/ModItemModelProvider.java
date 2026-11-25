@@ -54,6 +54,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.PALTA_CORTADA.get());
         basicItem(ModItems.PAPAS_CORTADAS.get());
         basicItem(ModItems.PAPA_SECA.get());
+        basicItem(ModItems.QUESO_FRESCO_WEDGE.get());
         basicItem(ModItems.PAPAS_FRITAS.get());
         basicItem(ModItems.TENTACULO_POTA.get());
         basicItem(ModItems.POTA_CORTADO.get());
@@ -101,6 +102,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.YUCA_SILVESTRE);
 
         withExistingParent(ModBlocks.TENDAL.getId().getPath(), modLoc("block/tendal"));
+        withExistingParent(ModBlocks.QUESO_FRESCO_WHEEL.getId().getPath(), modLoc("block/queso_fresco_wheel"));
 
         basicItem(ModItems.ATUN_BUCKET.get());
         withExistingParent(ModItems.ATUN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

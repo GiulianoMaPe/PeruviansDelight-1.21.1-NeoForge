@@ -14,6 +14,7 @@ import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import umpaz.brewinandchewin.common.block.CheeseWheelBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -82,6 +83,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         var tendalModel = models().getExistingFile(modLoc("block/tendal"));
         horizontalBlock(ModBlocks.TENDAL.get(), tendalModel);
+
+        registerQuesoFrescoWheel();
+    }
+
+    private void registerQuesoFrescoWheel() {
+        for (int servings = 0; servings <= 3; servings++) {
+            String modelName = "queso_fresco_wheel" + (servings == 3 ? "" : "_" + servings);
+            String template = "block/cheese_wheel_template" + (servings == 3 ? "" : "" + (3 - servings));
+            models().withExistingParent(modelName,
+                    ResourceLocation.fromNamespaceAndPath("brewinandchewin", template))
+                    .texture("top", modLoc("block/queso_fresco_wheel_top"))
+                    .texture("side", modLoc("block/queso_fresco_wheel_side"))
+                    .texture("bottom", modLoc("block/queso_fresco_wheel_bottom"))
+                    .texture("particle", modLoc("block/queso_fresco_wheel_top"));
+        }
+
+        getVariantBuilder(ModBlocks.QUESO_FRESCO_WHEEL.get()).forAllStates(state -> {
+            int servings = state.getValue(CheeseWheelBlock.SERVINGS);
+            String modelName = "queso_fresco_wheel" + (servings == 3 ? "" : "_" + servings);
+            return ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/" + modelName))).build();
+        });
     }
 
     // MÉTODOS HELPER

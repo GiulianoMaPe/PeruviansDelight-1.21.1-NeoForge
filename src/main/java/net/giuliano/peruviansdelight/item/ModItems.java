@@ -106,6 +106,8 @@ public class ModItems {
             Item::new, new Item.Properties().food(ModFoodProperties.PAPAS_CORTADAS));
     public static final DeferredItem<Item> PAPA_SECA = ITEMS.registerItem("papa_seca",
             Item::new, new Item.Properties().food(ModFoodProperties.PAPA_SECA));
+    public static final DeferredItem<Item> QUESO_FRESCO_WEDGE = ITEMS.registerItem("queso_fresco_wedge",
+            Item::new, new Item.Properties().food(ModFoodProperties.QUESO_FRESCO_WEDGE));
     public static final DeferredItem<Item> PAPAS_FRITAS = ITEMS.registerItem("papas_fritas",
             Item::new, new Item.Properties().food(ModFoodProperties.PAPAS_FRITAS));
     public static final DeferredItem<Item> TENTACULO_POTA = ITEMS.registerItem("tentaculo_pota",

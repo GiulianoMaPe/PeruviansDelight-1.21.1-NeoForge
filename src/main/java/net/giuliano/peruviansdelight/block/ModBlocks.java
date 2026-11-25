@@ -250,14 +250,28 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TENDAL = registerBlock("tendal",
             () -> new TendalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS).noOcclusion()));
 
+    public static final DeferredBlock<Block> QUESO_FRESCO_WHEEL = registerBlock("queso_fresco_wheel",
+            () -> new QuesoFrescoWheelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.HONEYCOMB_BLOCK)
+                    .noOcclusion().strength(0.5F)), new Item.Properties().stacksTo(16));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProperties) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, itemProperties);
+        return toReturn;
+    }
+
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Item.Properties properties) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), properties));
     }
 
     public static void register(IEventBus eventBus) {

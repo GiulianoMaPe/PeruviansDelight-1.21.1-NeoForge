@@ -3,8 +3,12 @@ package net.giuliano.peruviansdelight.datagen;
 import net.giuliano.peruviansdelight.PeruviansDelight;
 import net.giuliano.peruviansdelight.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -18,6 +22,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(TagKey.create(Registries.BLOCK,
+                        ResourceLocation.fromNamespaceAndPath("brewinandchewin", "cheese_wheels/ripe")))
+                .add(ModBlocks.QUESO_FRESCO_WHEEL.get());
+        this.tag(TagKey.create(Registries.BLOCK,
+                        ResourceLocation.fromNamespaceAndPath("c", "mineable/knife")))
+                .add(ModBlocks.QUESO_FRESCO_WHEEL.get());
         //this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
         //this.tag(BlockTags.NEEDS_IRON_TOOL);
 
